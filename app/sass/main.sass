@@ -48,7 +48,16 @@ $paragraph-font: 'OpenSans', sans-serif
 // -----------------
 p 
 	font-family: $paragraph-font
+	line-height: 1.6
+	font-weight: 100
 
+a 
+	color: #098d95
+	text-decoration: none
+	font-weight: 600
+
+	&:hover
+		color: #0ca5af
 
 .centered
 	max-width: 600px
@@ -113,7 +122,6 @@ header
 
 	p 
 		font-size: 18px
-		line-height: 1.6
 		color: #2a2a2a
 		text-align: center
 		padding: 0 5%
@@ -153,7 +161,7 @@ header
 	width: 100%
 
 footer
-	height: 300px
+	height: 360px
 	padding: 86px 0
 	box-sizing: border-box
 	background: #241152
@@ -169,9 +177,13 @@ footer
 		font-family: $title-font
 		color: white
 		margin: 0
-		margin-bottom: 36px
+		margin-bottom: 23px
 		font-weight: 300
 		text-transform: uppercase
+
+.subscription-text
+	color: white;
+	margin-bottom: 30px
 
 .suscription-wrapper__field
 	width: 100%
