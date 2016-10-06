@@ -1,0 +1,22 @@
+{
+  "name": "char.la",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server public/",
+    "postinstall": "gulp production"
+  },
+  "author": "@davsket",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^2.3.2",
+    "http-server": "^0.9.0",
+    "normalize.css": "^5.0.0"
+  }
+}
