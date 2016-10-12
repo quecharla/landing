@@ -1,63 +1,8 @@
 @import 'normalize.css/normalize.css'
-
-// Font
-//------------------
-
-@font-face
-	font-family: 'OpenSans-Cond'
-	src: url('../fonts/Open_Sans_Condensed/OpenSans-CondLight.ttf') format('truetype')
-	font-weight: 200
-	font-style: normal
-
-@font-face
-	font-family: 'OpenSans-Cond'
-	src: url('../fonts/Open_Sans_Condensed/OpenSans-CondBold.ttf') format('truetype')
-	font-weight: 800
-	font-style: normal
-
-@font-face
-	font-family: 'OpenSans'
-	src: url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype')
-	font-weight: 200
-	font-style: normal
-
-@font-face
-	font-family: 'OpenSans'
-	src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype')
-	font-weight: 500
-	font-style: normal
-
-@font-face
-	font-family: 'OpenSans'
-	src: url('../fonts/Open_Sans/OpenSans-Semibold.ttf') format('truetype')
-	font-weight: 700
-	font-style: normal
-
-@font-face
-	font-family: 'OpenSans'
-	src: url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype')
-	font-weight: 800
-	font-style: normal
-
-$title-font: 'OpenSans-Cond', sans-serif
-$paragraph-font: 'OpenSans', sans-serif
-
-//------------------
+@import '_typography.sass'
 
 // Share
 // -----------------
-p
-	font-family: $paragraph-font
-	line-height: 1.6
-	font-weight: 100
-
-a
-	color: #098d95
-	text-decoration: none
-	font-weight: 600
-
-	&:hover
-		color: #0ca5af
 
 .centered
 	max-width: 600px
@@ -130,7 +75,9 @@ header
 		padding: 0 5%
 		margin-bottom: 32px
 
-
+		&.caption
+			font-size: 0.8rem
+			color: lighten(#2a2a2a,60%)
 
 .speakers
 	padding: 50px 40px
