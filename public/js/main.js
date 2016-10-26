@@ -1,21 +1,28 @@
-function actionScroll() {
-  scrollTo(document.body, window.innerHeight, 200)
-}
+(function(){
+  const arrow = document.getElementById('scroll-header')
 
-function scrollTo(elem, to, duration) {
-    if (duration <= 0) return
+  function actionScroll() {
+    scrollTo(document.body, window.innerHeight, 200)
+  }
 
-    var diff = to - elem.scrollTop,
-    	add = diff / duration * 10
+  function scrollTo(elem, to, duration) {
+      if (duration <= 0) return
 
-    setTimeout(function() {
-        elem.scrollTop = elem.scrollTop + add
+      var diff = to - elem.scrollTop,
+        add = diff / duration * 10
 
-        if (elem.scrollTop === to) return
+      setTimeout(function() {
+          elem.scrollTop = elem.scrollTop + add
 
-        scrollTo(elem, to, duration - 10)
+          if (elem.scrollTop === to) return
 
-    }, 10)
-}
+          scrollTo(elem, to, duration - 10)
 
-document.getElementById('scroll-header').addEventListener("click", actionScroll , false)
+      }, 10)
+  }
+
+
+  if (arrow) {
+    arrow.addEventListener("click", actionScroll , false)
+  }
+}())

@@ -1,0 +1,28 @@
+<section class="centered speakers">
+  {% for speaker in edicion.charlantes %}
+    {% if speaker %}
+    <div class="speaker">
+      <a class="speaker__image" href="https://twitter.com/{{speaker.twitter}}" target="_blank">
+        <img src="{{speaker.avatar}}" alt="{{ speaker.nombre }}">
+      </a>
+      <div class="speaker__description-talk">
+        <div class="speaker__title">{{ speaker.titulo }}</div>
+        <a class="speaker__speaker-name" href="https://twitter.com/{{speaker.twitter}}" target="_blank">
+          {{ speaker.nombre }}
+        </a>
+        <div class="speaker__description">{{ speaker.subtitulo }}</div>
+      </div>
+    </div>
+    {% else %}
+      <div class="speaker">
+        <div class="speaker__image">
+        </div>
+        <div class="speaker__description-talk">
+          <div class="block speaker__title--placeholder"></div>
+          <div class="block speaker__speaker-name--placeholder"></div>
+          <div class="block speaker__description--placeholder"></div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</section>

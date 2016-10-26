@@ -35,12 +35,21 @@ header
 	background: -webkit-linear-gradient(top,  #241152 0%,#5028b6 100%)
 	background: linear-gradient(to bottom,  #241152 0%,#5028b6 100%)
 	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
+	position  : relative
+
+	&.small
+		height: 80px
+		margin-bottom: 5rem
+
+		.logo
+			width: 54px
 
 .logo
-	position: relative
 	width: 140px
+	position: absolute
 	top: 50%
-	margin-top: -70px
+	left: 50%
+	transform: translate(-50%, -50%)
 
 .down-arrow
 	position: absolute
@@ -94,22 +103,40 @@ header
 	border-radius: 70px
 	overflow: hidden
 
+	img
+		width: 100%
+
 .speaker__description-talk
 	flex: 1
 	margin-left: 30px
+	color: #666
 
 	.block
 		background: #e2e2e2
 		height: 8px
 		margin-bottom: 12px
 
-.speaker__description-talk__name-talk
+.speaker__title
+	font-size: 1.4rem
+	line-height: 1.2
+	font-weight: 600
+
+.speaker__speaker-name
+	font-size: 1.2rem
+	font-weight: 100
+	line-height: 1.4
+	margin: 0.3rem 0
+
+.speaker__description
+	line-height: 1.4
+
+.speaker__title--placeholder
 	width: 60%
 
-.speaker__description-talk__name-speaker
+.speaker__speaker-name--placeholder
 	width: 50%
 
-.speaker__description-talk__description-speaker
+.speaker__description--placeholder
 	width: 100%
 
 footer
