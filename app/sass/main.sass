@@ -1,5 +1,6 @@
 @import 'normalize.css/normalize.css'
-@import '_typography.sass'
+@import 'typography'
+@import 'icomoon'
 
 // Share
 // -----------------
@@ -44,6 +45,47 @@ header
 		.logo
 			width: 54px
 
+.top-bar
+	height: 51px
+	text-align: right
+	padding: 15px
+	box-sizing: border-box
+	background: transparent
+	position: fixed
+	width: 100%
+	-webkit-transition: background 0.3s
+	transition: background 0.3s
+
+	&.active-bkg
+		background: #241152
+		-webkit-transition: background 0.3s
+		transition: background 0.3s
+
+	.twitter-link
+		float: left
+		color: white
+
+		&:hover
+			color: #098d95
+
+	.icon-twitter
+		font-family: $paragraph-font
+		font-weight: 700
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+
+		&:before
+			padding-right: 4px
+			font-family: 'icomoon'
+
+	.__slackin
+		float: right
+		z-index: 12
+
+		button 
+			color: #241152
+
+
 .logo
 	width: 140px
 	position: absolute
@@ -73,20 +115,22 @@ header
 		position: absolute
 		left: 50%
 		margin-left: -55px
+		z-index: -1
 
 	h3
 		text-align: center
+		color: #313131
 
 	p
 		font-size: 18px
-		color: #2a2a2a
+		color: #313131
 		text-align: center
 		padding: 0 5%
 		margin-bottom: 32px
 
 		&.caption
 			font-size: 0.8rem
-			color: lighten(#2a2a2a,60%)
+			color: lighten(#313131,50%)
 
 .speakers
 	padding: 50px 40px
@@ -120,15 +164,29 @@ header
 	font-size: 1.4rem
 	line-height: 1.2
 	font-weight: 600
+	color: #241152
+	font-family: $title-font
+	text-transform: uppercase
+	letter-spacing: 0.3px
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	margin: 0
 
 .speaker__speaker-name
-	font-size: 1.2rem
-	font-weight: 100
+	font-size: 1.1rem
 	line-height: 1.4
 	margin: 0.3rem 0
+	font-family: $title-font
+	cursor: pointer
+	color: #098d95
+	font-weight: 600
 
 .speaker__description
 	line-height: 1.4
+	font-family: $paragraph-font
+	color: #313131
+	font-weight: 100
+	margin: 7px 0 0
 
 .speaker__title--placeholder
 	width: 60%

@@ -1,8 +1,11 @@
 (function(){
-  const arrow = document.getElementById('scroll-header')
+  const arrow = document.getElementById('scroll-header'),
+        topBar = document.getElementsByClassName('top-bar'),
+        windowHeight = window.innerHeight,
+        valueScrollH = windowHeight - 52
 
   function actionScroll() {
-    scrollTo(document.body, window.innerHeight, 200)
+    scrollTo(document.body, windowHeight, 200)
   }
 
   function scrollTo(elem, to, duration) {
@@ -23,6 +26,15 @@
 
 
   if (arrow) {
-    arrow.addEventListener("click", actionScroll , false)
+    arrow.addEventListener('click', actionScroll , false)
   }
+
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > valueScrollH){
+      topBar[0].classList.add('active-bkg')
+    }else{
+      topBar[0].classList.remove('active-bkg')
+    }
+  })
+
 }())

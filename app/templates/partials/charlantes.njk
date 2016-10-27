@@ -6,11 +6,11 @@
         <img src="{{speaker.avatar}}" alt="{{ speaker.nombre }}">
       </a>
       <div class="speaker__description-talk">
-        <div class="speaker__title">{{ speaker.titulo }}</div>
+        <h2 class="speaker__title">{{ speaker.titulo }}</h2>
         <a class="speaker__speaker-name" href="https://twitter.com/{{speaker.twitter}}" target="_blank">
           {{ speaker.nombre }}
         </a>
-        <div class="speaker__description">{{ speaker.subtitulo }}</div>
+        <p class="speaker__description">{{ speaker.subtitulo }}</p>
       </div>
     </div>
     {% else %}
