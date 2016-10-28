@@ -39,44 +39,33 @@ header
 	position  : relative
 
 	&.small
-		height: 80px
-		margin-bottom: 5rem
+		height: 60px
+		margin-bottom: 4.5rem
 
 		.logo
-			width: 54px
+			width: 29px
+			left: 33px
+			top: 33px
 
 .top-bar
-	height: 51px
+	height: 62px
 	text-align: right
-	padding: 15px
+	padding: 20px
 	box-sizing: border-box
 	background: transparent
-	position: fixed
 	width: 100%
 	-webkit-transition: background 0.3s
 	transition: background 0.3s
 
-	&.active-bkg
-		background: #241152
-		-webkit-transition: background 0.3s
-		transition: background 0.3s
-
 	.twitter-link
-		float: left
+		float: right
 		color: white
+		font-size: 25px
+		margin-left: 10px
+		font-size: 21px
 
 		&:hover
 			color: #098d95
-
-	.icon-twitter
-		font-family: $paragraph-font
-		font-weight: 700
-		-webkit-font-smoothing: antialiased
-		-moz-osx-font-smoothing: grayscale
-
-		&:before
-			padding-right: 4px
-			font-family: 'icomoon'
 
 	.__slackin
 		float: right
@@ -108,13 +97,13 @@ header
 	padding: 60px 50px
 
 	&:after
-		width: 110px
+		width: 80px
 		height: 4px
 		background: #098d95
 		content: ''
 		position: absolute
 		left: 50%
-		margin-left: -55px
+		margin-left: -40px
 		z-index: -1
 
 	h3
@@ -127,6 +116,9 @@ header
 		text-align: center
 		padding: 0 5%
 		margin-bottom: 32px
+
+		a 
+			border-bottom: solid 2px
 
 		&.caption
 			font-size: 0.8rem
@@ -164,7 +156,7 @@ header
 	font-size: 1.4rem
 	line-height: 1.2
 	font-weight: 600
-	color: #241152
+	color: #5028b6
 	font-family: $title-font
 	text-transform: uppercase
 	letter-spacing: 0.3px

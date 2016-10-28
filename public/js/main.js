@@ -1,8 +1,7 @@
 (function(){
   const arrow = document.getElementById('scroll-header'),
         topBar = document.getElementsByClassName('top-bar'),
-        windowHeight = window.innerHeight,
-        valueScrollH = windowHeight - 52
+        windowHeight = window.innerHeight
 
   function actionScroll() {
     scrollTo(document.body, windowHeight, 200)
@@ -28,13 +27,5 @@
   if (arrow) {
     arrow.addEventListener('click', actionScroll , false)
   }
-
-  window.addEventListener('scroll', function(){
-    if (window.scrollY > valueScrollH){
-      topBar[0].classList.add('active-bkg')
-    }else{
-      topBar[0].classList.remove('active-bkg')
-    }
-  })
 
 }())

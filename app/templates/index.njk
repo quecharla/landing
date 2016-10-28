@@ -3,7 +3,7 @@
 {% block header %}
   <header>
     <div class="top-bar">
-      <a href="https://twitter.com/quecharla" class="twitter-link"><span class="icon-twitter">@quecharla</span></a>
+      <a href="https://twitter.com/quecharla" class="twitter-link"><span class="icon-twitter"></span></a>
       <script src="http://slack.char.la/slackin.js"></script>
     </div>
     <div class="logo">
@@ -17,7 +17,8 @@
   <div class="centered description-wrapper">
     <h3>Nos vemos aquí el {{ edicion.fecha.getDate() }} de {{meses[edicion.fecha.getMonth()]}} a las 8:00PM COT</h3>
     <p>Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.</p>
-    <p class="caption">Somos un evento comunitario y sin ánimo de lucro</p>
+    <p>Nos regimos por el <a href="http://localhost:3000/codigo-de-conducta">código de conducta de char.la</a></p>
+    <p class="caption">Somos un evento comunitario y sin ánimo de lucro.</p>
   </div>
   {% include "partials/charlantes.njk" %}
 {% endblock %}
