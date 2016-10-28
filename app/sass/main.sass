@@ -37,6 +37,7 @@ header
 	background: linear-gradient(to bottom,  #241152 0%,#5028b6 100%)
 	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
 	position  : relative
+	background-attachment: fixed
 
 	&.small
 		height: 60px
@@ -92,9 +93,16 @@ header
 	margin-left: -25px
 	cursor: pointer
 	opacity: 0.6
+	animation: levitate 1s alternate infinite
 
 	&:hover
 		opacity: 1
+
+@keyframes levitate
+	0%
+		transform: translateY(0px)
+	100%
+		transform: translateY(-6px)
 
 .description-wrapper
 	padding: 60px 50px
@@ -193,8 +201,7 @@ header
 	width: 100%
 
 footer
-	height: 360px
-	padding: 86px 0
+	padding: 86px 0 50px
 	box-sizing: border-box
 	background: #241152
 	text-align: center
@@ -204,14 +211,12 @@ footer
 	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
 
 	h2
-		font-size: 39px
-		letter-spacing: 1px
-		font-family: $title-font
+		font-size: 42px
 		color: white
 		margin: 0
 		margin-bottom: 23px
-		font-weight: 300
-		text-transform: uppercase
+		font-weight: 100
+		-webkit-font-smoothing: antialiased
 
 .subscription-text
 	color: white
