@@ -1,0 +1,12 @@
+{% extends "layout/base.njk" %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+  <div class="centered description-wrapper">
+    <h3>Realizada el {{ edicion.fecha.getDate() }} de {{meses[edicion.fecha.getMonth()]}} a las 8:00PM COT</h3>
+    <p>Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.</p>
+    <p class="caption">Somos un evento comunitario y sin ánimo de lucro</p>
+  </div>
+  {% include "partials/charlantes.njk" %}
+{% endblock %}

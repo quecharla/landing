@@ -1,5 +1,6 @@
 @import 'normalize.css/normalize.css'
-@import '_typography.sass'
+@import 'typography'
+@import 'icomoon'
 
 // Share
 // -----------------
@@ -35,12 +36,55 @@ header
 	background: -webkit-linear-gradient(top,  #241152 0%,#5028b6 100%)
 	background: linear-gradient(to bottom,  #241152 0%,#5028b6 100%)
 	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
+	position  : relative
+	background-attachment: fixed
+
+	&.small
+		height: 60px
+		margin-bottom: 4.5rem
+		background: -moz-linear-gradient(-45deg,  #241152 0%, #5028b6 100%)
+		background: -webkit-linear-gradient(-45deg,  #241152 0%,#5028b6 100%)
+		background: linear-gradient(-45deg, #241152 0, #5028b6 100%)
+
+		.logo
+			width: 29px
+			left: 33px
+			top: 33px
+
+.top-bar
+	height: 62px
+	text-align: right
+	padding: 20px
+	box-sizing: border-box
+	background: transparent
+	width: 100%
+	-webkit-transition: background 0.3s
+	transition: background 0.3s
+
+	.twitter-link
+		float: right
+		color: white
+		font-size: 25px
+		margin-left: 10px
+		font-size: 21px
+
+		&:hover
+			color: #098d95
+
+	.__slackin
+		float: right
+		z-index: 12
+
+		button 
+			color: #241152
+
 
 .logo
-	position: relative
 	width: 140px
+	position: absolute
 	top: 50%
-	margin-top: -70px
+	left: 50%
+	transform: translate(-50%, -50%)
 
 .down-arrow
 	position: absolute
@@ -49,35 +93,47 @@ header
 	margin-left: -25px
 	cursor: pointer
 	opacity: 0.6
+	animation: levitate 1s alternate infinite
 
 	&:hover
 		opacity: 1
+
+@keyframes levitate
+	0%
+		transform: translateY(0px)
+	100%
+		transform: translateY(-6px)
 
 .description-wrapper
 	padding: 60px 50px
 
 	&:after
-		width: 110px
+		width: 80px
 		height: 4px
 		background: #098d95
 		content: ''
 		position: absolute
 		left: 50%
-		margin-left: -55px
+		margin-left: -40px
+		z-index: -1
 
 	h3
 		text-align: center
+		color: #313131
 
 	p
 		font-size: 18px
-		color: #2a2a2a
+		color: #313131
 		text-align: center
 		padding: 0 5%
 		margin-bottom: 32px
 
+		a 
+			border-bottom: solid 2px
+
 		&.caption
 			font-size: 0.8rem
-			color: lighten(#2a2a2a,60%)
+			color: lighten(#313131,50%)
 
 .speakers
 	padding: 50px 40px
@@ -94,27 +150,58 @@ header
 	border-radius: 70px
 	overflow: hidden
 
+	img
+		width: 100%
+
 .speaker__description-talk
 	flex: 1
 	margin-left: 30px
+	color: #666
 
 	.block
 		background: #e2e2e2
 		height: 8px
 		margin-bottom: 12px
 
-.speaker__description-talk__name-talk
+.speaker__title
+	font-size: 1.4rem
+	line-height: 1.2
+	font-weight: 600
+	color: #5028b6
+	font-family: $title-font
+	text-transform: uppercase
+	letter-spacing: 0.3px
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	margin: 0
+
+.speaker__speaker-name
+	font-size: 1.1rem
+	line-height: 1.4
+	margin: 0.3rem 0
+	font-family: $title-font
+	cursor: pointer
+	color: #098d95
+	font-weight: 600
+
+.speaker__description
+	line-height: 1.4
+	font-family: $paragraph-font
+	color: #313131
+	font-weight: 100
+	margin: 7px 0 0
+
+.speaker__title--placeholder
 	width: 60%
 
-.speaker__description-talk__name-speaker
+.speaker__speaker-name--placeholder
 	width: 50%
 
-.speaker__description-talk__description-speaker
+.speaker__description--placeholder
 	width: 100%
 
 footer
-	height: 360px
-	padding: 86px 0
+	padding: 86px 0 50px
 	box-sizing: border-box
 	background: #241152
 	text-align: center
@@ -124,14 +211,12 @@ footer
 	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
 
 	h2
-		font-size: 39px
-		letter-spacing: 1px
-		font-family: $title-font
+		font-size: 42px
 		color: white
 		margin: 0
 		margin-bottom: 23px
-		font-weight: 300
-		text-transform: uppercase
+		font-weight: 100
+		-webkit-font-smoothing: antialiased
 
 .subscription-text
 	color: white
