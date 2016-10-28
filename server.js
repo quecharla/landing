@@ -5,21 +5,15 @@ const path       = require('path')
 const semverSort = require('semver-sort')
 const utils      = require('./lib/utils')
 
-console.log('...0')
-
 const POSTS_DIR      = './posts'
 const PORT           = process.env.PORT || 3000
 const CLOUDINARY_URL = '//res.cloudinary.com/charla/image/fetch/c_fill,w_250,h_250/'
 const meses          = 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre'.split(',')
 const app            = express()
 
-console.log('...1')
-
 let versions = fs.readdirSync(POSTS_DIR)
       .filter(file => /^[\d\.]+\.json$/.test(file))
       .map(file => file.replace(/\.json$/, ''))
-
-console.log('...2')
 
 const ediciones = semverSort.desc(versions)
         .map(version => {
@@ -79,13 +73,8 @@ app.get('/:version', function(req, res) {
   }
 })
 
-console.log('...3')
-
 app.use(express.static('public'))
-
-console.log('...4')
 
 app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}!`)
 })
-console.log('...5')
