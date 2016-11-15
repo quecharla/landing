@@ -61,6 +61,10 @@ app.get('/codigo-de-conducta', function(req, res) {
   res.render('coc.njk')
 })
 
+app.get('/propuesta', function(req, res) {
+  res.render('propuesta.njk')
+})
+
 app.get('/:version', function(req, res) {
   const edicion = ediciones.find(edicion => edicion.version === req.params.version)
   if (edicion) {
