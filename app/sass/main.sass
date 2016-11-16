@@ -86,6 +86,38 @@ header
 	left: 50%
 	transform: translate(-50%, -50%)
 
+.en-vivo
+	background: #341977
+	padding: .8rem .8rem .6rem
+	border-radius: 3px
+	color: #fff
+	font-weight: 400
+	letter-spacing: 2px
+	border: 3px solid #28135b
+	position: absolute
+	top: 50%
+	margin-top: 130px
+	transform: translateX(-50%)
+	animation: live 1s linear infinite
+
+	&:hover
+		color: white
+		border-color: #098d95
+
+	.cuenta-regresiva
+		padding-top: 0.4rem
+		font-weight: 100
+		font-size: 0.9rem
+
+@keyframes live
+	0%
+		opacity: 1
+	50%
+		opacity: 0.5
+	100%
+		opacity: 1
+
+
 .down-arrow
 	position: absolute
 	bottom: 26px
