@@ -21,12 +21,12 @@
             var ahora = new Date()
             if (ahora < transmisión) {
               var diferencia = ~~((transmisión - ahora) / 1000)
-              var segs = 0, mins = 0, minsS = '', hors = 0, horsS = ''
-              if (diferencia > 60 * 60) {
+              var segs = 0, mins = 0, minsS = '00:', hors = 0, horsS = '00:'
+              if (diferencia >= 60 * 60) {
                 hors = ~~(diferencia / (60 * 60))
                 horsS = twoDigit(hors) + ':'
               }
-              if (diferencia > 60) {
+              if (diferencia >= 60) {
                 diferencia = diferencia - hors * 60 * 60
                 mins = ~~(diferencia / 60)
                 minsS = twoDigit(mins) + ':'
