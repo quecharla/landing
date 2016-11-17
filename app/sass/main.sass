@@ -51,6 +51,12 @@ header
 			left: 33px
 			top: 33px
 
+.header__date-time
+  color: white
+  font-weight: 100
+  -webkit-font-smoothing: antialiased
+  font-size: 0.8rem
+
 .top-bar
 	height: 62px
 	text-align: right
@@ -86,7 +92,8 @@ header
 	left: 50%
 	transform: translate(-50%, -50%)
 
-.en-vivo
+.en-vivo,
+.casi-en-vivo
 	background: #341977
 	padding: .8rem .8rem .6rem
 	border-radius: 3px
@@ -108,6 +115,14 @@ header
 		padding-top: 0.4rem
 		font-weight: 100
 		font-size: 0.9rem
+
+.casi-en-vivo
+  animation: none
+  cursor: default
+
+  &:hover
+    color: #fff
+    border-color: #28135b
 
 @keyframes live
 	0%
