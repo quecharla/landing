@@ -93,21 +93,21 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 - Al cargar el sitio busca todos los `.to-timezone` y les agrega la hora en el huso horario del cliente (si es diferente a COT) usando el attr `data-time` con un ISO Date String.
 
-<img alt="antes" src="https://cldup.com/Ehj_QD7LIi.png" style="max-width: 540px" />
+<img alt="antes" src="https://cldup.com/Ehj_QD7LIi.png" width="540" />
 
-<img alt="antes" src="https://cldup.com/DMESEBJ0XT.png" style="max-width: 540px" />
+<img alt="antes" src="https://cldup.com/DMESEBJ0XT.png" width="540" />
 
 - Si queda menos de 24 horas para el evento y se pone un contador regresivo y si no hay `streamingUrl` dirá `Dentro de Poco`
 
-<img alt="preview" src="https://cldup.com/AeQRs_BYTt.png" style="max-width: 295px" />
+<img alt="preview" src="https://cldup.com/AeQRs_BYTt.png" width="295" />
 
 - Si han pasado menos de 3 horas desde el inicio del evento y hay `streamingUrl` dirá `Transmisión en Vivo`
 
-<img alt="preview" src="https://cldup.com/YW3blg7nyz.png" style="max-width: 376px" />
+<img alt="preview" src="https://cldup.com/YW3blg7nyz.png" width="376" />
 
 - Si aún no ha iniciado el evento pero faltan menos de 24 horas y hay `streamingUrl` dirá `Transmisión en Vivo` y pondrá el contador regresivo
 
-<img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" style="width: 399px" />
+<img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" width="399" />
 
 
 ## TODO
