@@ -1,6 +1,7 @@
+<img alt="Char.la" src="public/images/favicon/android-chrome-192x192.png" width="80" />
 # Char.la
 
-![Char.la](public/images/favicon/android-chrome-192x192.png)
+Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.
 
 ## Env
 
@@ -65,7 +66,7 @@ para los próximos eventos, las propiedades son las siguientes:
 | streamingUrl | String URL      | **OPCIONAL** URL del streaming, si hay URL de streaming y han pasado menos 3 horas desde la `fecha` en el sitio se pone `Transmisión en Vivo` |
 | videoUrl     | String URL      | **OPCIONAL** URL del video en Youtube |
 
-Charlante
+### Charlante
 
 | Prop            | Tipo       | Descripción     |
 | --------------- | ---------- | --------------- |
