@@ -1,20 +1,19 @@
 'use strict'
 
-import dateFormat      from 'dateformat'
-import $               from 'jquery'
+import $ from 'jquery'
 import envivoBotonHtml from './templates/liveButton.njk'
 
 const sigFechaEl = document.querySelector('[data-next-date]')
 
 if (sigFechaEl) {
-  const sigFechaStr = sigFechaEl.getAttribute('data-next-date'),
-        streamingUrl = sigFechaEl.getAttribute('data-streaming-url'),
-        transmisión = new Date(sigFechaStr),
-        ahora = new Date(),
-        unDia = 24 * 60 * 60 * 1000
-  
+  const sigFechaStr = sigFechaEl.getAttribute('data-next-date')
+  const streamingUrl = sigFechaEl.getAttribute('data-streaming-url')
+  const transmisión = new Date(sigFechaStr)
+  const ahora = new Date()
+  const unDia = 24 * 60 * 60 * 1000
+
   if (ahora < transmisión && transmisión - ahora < unDia) {
-    const regresivo = $(envivoBotonHtml.render({ 
+    const regresivo = $(envivoBotonHtml.render({
       streamingUrl
     }))
     $('header').append(regresivo)
@@ -23,14 +22,16 @@ if (sigFechaEl) {
 }
 
 function iniciarContador (transmisión, ahora, regresivo) {
-  const sigFechaStr = sigFechaEl.getAttribute('data-next-date')
-
   if (ahora < transmisión) {
-    var intérvalo = setInterval(function () {
+    let intérvalo = setInterval(function () {
       var ahora = new Date()
       if (ahora < transmisión) {
-        var diferencia = ~~((transmisión - ahora) / 1000)
-        var segs = 0, mins = 0, minsS = '00:', hors = 0, horsS = '00:'
+        let diferencia = ~~((transmisión - ahora) / 1000)
+        let segs = 0
+        let mins = 0
+        let minsS = '00:'
+        let hors = 0
+        let horsS = '00:'
         if (diferencia >= 60 * 60) {
           hors = ~~(diferencia / (60 * 60))
           horsS = dosDigitos(hors) + ':'
@@ -41,7 +42,7 @@ function iniciarContador (transmisión, ahora, regresivo) {
           minsS = dosDigitos(mins) + ':'
         }
 
-        segs = diferencia - hors * 60 * 60 - mins * 60 
+        segs = diferencia - hors * 60 * 60 - mins * 60
 
         regresivo.innerHTML = horsS + minsS + dosDigitos(segs)
       } else {

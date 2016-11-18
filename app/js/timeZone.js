@@ -1,4 +1,4 @@
-import $      from 'jquery'
+import $ from 'jquery'
 import moment from 'moment-timezone'
 
 const timeZone = moment.tz(new Date(), moment.tz.guess()).format('z')

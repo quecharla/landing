@@ -1,13 +1,16 @@
+const path = require('path')
+
 module.exports = {
-  context: __dirname + '/app/js',
+  context: path.resolve('/app/js'),
   entry: './main',
   resolve: {
+    extensions: ['', '.json', '.jsx', '.js'],
     root: [
-      __dirname + '/app/js'
+      path.resolve('/app/js')
     ]
   },
   output: {
-    path: __dirname + '/public/js',
+    path: path.resolve('/public/js'),
     filename: 'main.js'
   },
   module: {
@@ -22,12 +25,9 @@ module.exports = {
         loader: 'nunjucks-loader'
       },
       {
-        test: /\.json$/, 
+        test: /\.json$/,
         loader: 'json-loader'
       }
     ]
-  },
-  resolve: {
-    extensions: ['', '.json', '.jsx', '.js']
   }
 }
