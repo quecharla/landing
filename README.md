@@ -89,9 +89,15 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 **Cliente**
 
-- Al cargar el sitio busca todos los `.to-timezone` y les agrega la hora en el huso horario del cliente (si es diferente a COT)
-- Si queda menos de 24 horas para el evento se pone un contador regresivo diciendo `Dentro de Poco`
-- Si han pasado menos de 3 horas desde el inicio del evento se pone `Transmisión en Vivo`
+- Al cargar el sitio busca todos los `.to-timezone` y les agrega la hora en el huso horario del cliente (si es diferente a COT) usando el attr `data-time` con un ISO Date String.
+![Antes](https://cldup.com/Ehj_QD7LIi.png)
+![Después](https://cldup.com/DMESEBJ0XT.png)
+- Si queda menos de 24 horas para el evento y se pone un contador regresivo y si no hay `streamingUrl` dirá `Dentro de Poco`
+![Preview](https://cldup.com/AeQRs_BYTt.png)
+- Si han pasado menos de 3 horas desde el inicio del evento y hay `streamingUrl` dirá `Transmisión en Vivo`
+![Preview](https://cldup.com/rjEwrq851t-3000x3000.png)
+- Si aún no ha iniciado el evento pero faltan menos de 24 horas y hay `streamingUrl` dirá `Transmisión en Vivo` y pondrá el contador regresivo
+![Preview](https://cldup.com/yqLS_Ovq2o.png)
 
 ## TODO
 
