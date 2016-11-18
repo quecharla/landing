@@ -113,10 +113,10 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 ## TODO
 
--[ ] Soportar `preguntasUrl` en la página de la versión
--[ ] Soportar `videoUrl` en la página de la versión
--[ ] Soportar `videoUrl` en el speaker
--[ ] Soportar `presentacionUrl` en el speaker
+- [ ] Soportar `preguntasUrl` en la página de la versión
+- [ ] Soportar `videoUrl` en la página de la versión
+- [ ] Soportar `videoUrl` en el speaker
+- [ ] Soportar `presentacionUrl` en el speaker
 
 
 ## Licencia
