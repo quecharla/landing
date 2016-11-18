@@ -99,15 +99,15 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 - Si queda menos de 24 horas para el evento y se pone un contador regresivo y si no hay `streamingUrl` dirá `Dentro de Poco`
 
-<img alt="preview" src="https://cldup.com/AeQRs_BYTt.png" width="295" />
+<img alt="preview" src="https://cldup.com/AeQRs_BYTt.png" width="200" />
 
 - Si han pasado menos de 3 horas desde el inicio del evento y hay `streamingUrl` dirá `Transmisión en Vivo`
 
-<img alt="preview" src="https://cldup.com/YW3blg7nyz.png" width="376" />
+<img alt="preview" src="https://cldup.com/YW3blg7nyz.png" width="200" />
 
 - Si aún no ha iniciado el evento pero faltan menos de 24 horas y hay `streamingUrl` dirá `Transmisión en Vivo` y pondrá el contador regresivo
 
-<img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" width="399" />
+<img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" width="200" />
 
 
 ## TODO
