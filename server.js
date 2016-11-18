@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8080
 const CLOUDINARY_URL = '//res.cloudinary.com/charla/image/fetch/c_fill,w_250,h_250/'
 const meses = 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre'.split(',')
 const app = express()
+const duraciónTransmisión = 3 * 60 * 60 * 1000 // 3 horas que dura la transmision
 
 // Setting COT
 process.env.TZ = 'America/Bogota'
@@ -28,7 +29,7 @@ const ediciones = semverSort.desc(versions)
             fecha: fecha,
             fechaFormat: dateformat(fecha, 'yyyy/mm/dd'),
             hora: dateformat(fecha, 'h:MMTT'),
-            yaPaso: fecha < Date.now(),
+            yaPaso: fecha < Date.now() - duraciónTransmisión,
             version: version,
             charlantes: edicion.charlantes.map(charlante => Object.assign({}, charlante, {
               avatar: `${CLOUDINARY_URL}${charlante.avatar}`

@@ -1,16 +1,16 @@
 const path = require('path')
 
 module.exports = {
-  context: path.resolve('/app/js'),
+  context: path.resolve('app/js'),
   entry: './main',
   resolve: {
     extensions: ['', '.json', '.jsx', '.js'],
     root: [
-      path.resolve('/app/js')
+      path.resolve('app/js')
     ]
   },
   output: {
-    path: path.resolve('/public/js'),
+    path: path.resolve('public/js'),
     filename: 'main.js'
   },
   module: {

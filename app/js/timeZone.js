@@ -12,7 +12,6 @@ function addTimezone (el) {
   const separator = $el.data('time-separator') || ' / '
   const date = moment.tz($el.data('time'), moment.tz.guess())
   $el.append(`${separator}${date.format('h:mmA z')}`)
-  return false
 }
 
 export default addTimezone

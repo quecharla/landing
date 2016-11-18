@@ -1,6 +1,7 @@
 @import 'normalize.css/normalize.css'
 @import 'typography'
 @import 'icomoon'
+@import 'var'
 
 // Share
 // -----------------
@@ -11,8 +12,8 @@
 	padding: 0 40px
 
 .green-button
-	background: #098d95
-	color: white
+	background: $color-links
+	color: $white
 	border: none
 	height: 100%
 	width: 120px
@@ -24,27 +25,22 @@
 	letter-spacing: 1px
 
 	&:hover
-		background: #0ca5af
+		background: $lighter-blue
 
 //------------------
 
 header
-	height    : 100vh
-	background: #241152
+	height: 100vh
+	background: $purple
 	text-align: center
-	background: -moz-linear-gradient(top,  #241152 0%, #5028b6 100%)
-	background: -webkit-linear-gradient(top,  #241152 0%,#5028b6 100%)
-	background: linear-gradient(to bottom,  #241152 0%,#5028b6 100%)
-	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
-	position  : relative
+	background: linear-gradient(to bottom,  $purple 0%, $lighter-purple 100%)
+	position: relative
 	background-attachment: fixed
 
 	&.small
 		height: 60px
 		margin-bottom: 4.5rem
-		background: -moz-linear-gradient(-45deg,  #241152 0%, #5028b6 100%)
-		background: -webkit-linear-gradient(-45deg,  #241152 0%,#5028b6 100%)
-		background: linear-gradient(-45deg, #241152 0, #5028b6 100%)
+		background: linear-gradient(-45deg, $purple 0, $lighter-purple 100%)
 
 		.logo
 			width: 29px
@@ -52,7 +48,7 @@ header
 			top: 33px
 
 .header__date-time
-  color: white
+  color: $white
   font-weight: 100
   -webkit-font-smoothing: antialiased
   font-size: 0.8rem
@@ -69,20 +65,20 @@ header
 
 	.twitter-link
 		float: right
-		color: white
+		color: $white
 		font-size: 25px
 		margin-left: 10px
 		font-size: 21px
 
 		&:hover
-			color: #098d95
+			color: $color-links
 
 	.__slackin
 		float: right
 		z-index: 12
 
 		button 
-			color: #241152
+			color: $purple
 
 
 .logo
@@ -94,13 +90,13 @@ header
 
 .en-vivo,
 .casi-en-vivo
-	background: #341977
+	background: lighten($purple, 8%)
 	padding: .8rem .8rem .6rem
 	border-radius: 3px
-	color: #fff
+	color: $white
 	font-weight: 400
 	letter-spacing: 2px
-	border: 3px solid #28135b
+	border: 3px solid darken($purple, 1%)
 	position: absolute
 	top: 50%
 	margin-top: 130px
@@ -108,8 +104,8 @@ header
 	animation: live 1s linear infinite
 
 	&:hover
-		color: white
-		border-color: #098d95
+		color: $white
+		border-color: $color-links
 
 	.cuenta-regresiva
 		padding-top: 0.4rem
@@ -121,8 +117,8 @@ header
   cursor: default
 
   &:hover
-    color: #fff
-    border-color: #28135b
+    color: $white
+    border-color: darken($purple, 10%)
 
 @keyframes live
 	0%
@@ -157,7 +153,7 @@ header
 	&:after
 		width: 80px
 		height: 4px
-		background: #098d95
+		background: $blue
 		content: ''
 		position: absolute
 		left: 50%
@@ -214,7 +210,7 @@ header
 	font-size: 1.4rem
 	line-height: 1.2
 	font-weight: 600
-	color: #5028b6
+	color: $lighter-purple
 	font-family: $title-font
 	text-transform: uppercase
 	letter-spacing: 0.3px
@@ -228,7 +224,7 @@ header
 	margin: 0.3rem 0
 	font-family: $title-font
 	cursor: pointer
-	color: #098d95
+	color: $color-links
 	font-weight: 600
 
 .speaker__description
@@ -250,30 +246,27 @@ header
 footer
 	padding: 86px 0 50px
 	box-sizing: border-box
-	background: #241152
+	background: $purple
 	text-align: center
-	background: -moz-linear-gradient(top,  #241152 0%, #5028b6 100%)
-	background: -webkit-linear-gradient(top,  #241152 0%,#5028b6 100%)
-	background: linear-gradient(to bottom,  #241152 0%,#5028b6 100%)
-	filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#241152', endColorstr='#5028b6',GradientType=0 )
+	background: linear-gradient(to bottom,  $purple 0%, $lighter-purple 100%)
 
 	h2
 		font-size: 42px
-		color: white
+		color: $white
 		margin: 0
 		margin-bottom: 23px
 		font-weight: 100
 		-webkit-font-smoothing: antialiased
 
 .subscription-text
-	color: white
+	color: $white
 	margin-bottom: 30px
 
 .suscription-wrapper__field
 	width: 100%
 	height: 50px
 	display: flex
-	background: white
+	background: $white
 
 	.mc-field-group
 		flex: 1
