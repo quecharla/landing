@@ -50,6 +50,7 @@ Si deseas generar el css y js:
 gulp distribution
 ```
 
+
 ## Datos de Ediciones
 
 La información del sitio se mantiene en la carpeta [posts](posts), 
@@ -76,6 +77,7 @@ Charlante
 | videoUrl        | String URL | **OPCIONAL** URL del video en Youtube de la charla del speaker |
 | presentacionUrl | String URL | **OPCIONAL** URL a la presentación
 
+
 ## Comportamiento y características
 
 Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
@@ -90,14 +92,23 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 **Cliente**
 
 - Al cargar el sitio busca todos los `.to-timezone` y les agrega la hora en el huso horario del cliente (si es diferente a COT) usando el attr `data-time` con un ISO Date String.
-![Antes](https://cldup.com/Ehj_QD7LIi.png)
-![Después](https://cldup.com/DMESEBJ0XT.png)
+
+<img alt="antes" src="https://cldup.com/Ehj_QD7LIi.png" style="max-width: 540px" />
+
+<img alt="antes" src="https://cldup.com/DMESEBJ0XT.png" style="max-width: 540px" />
+
 - Si queda menos de 24 horas para el evento y se pone un contador regresivo y si no hay `streamingUrl` dirá `Dentro de Poco`
-![Preview](https://cldup.com/AeQRs_BYTt.png)
+
+<img alt="preview" src="https://cldup.com/AeQRs_BYTt.png" style="max-width: 295px" />
+
 - Si han pasado menos de 3 horas desde el inicio del evento y hay `streamingUrl` dirá `Transmisión en Vivo`
-![Preview](https://cldup.com/rjEwrq851t-3000x3000.png)
+
+<img alt="preview" src="https://cldup.com/YW3blg7nyz.png" style="max-width: 376px" />
+
 - Si aún no ha iniciado el evento pero faltan menos de 24 horas y hay `streamingUrl` dirá `Transmisión en Vivo` y pondrá el contador regresivo
-![Preview](https://cldup.com/yqLS_Ovq2o.png)
+
+<img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" style="width: 399px" />
+
 
 ## TODO
 
@@ -105,6 +116,7 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 [ ] Soportar `videoUrl` en la página de la versión
 [ ] Soportar `videoUrl` en el speaker
 [ ] Soportar `presentacionUrl` en el speaker
+
 
 ## Licencia
 
