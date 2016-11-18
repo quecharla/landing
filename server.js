@@ -117,3 +117,5 @@ app.use(express.static('public'))
 app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}!`)
 })
+
+module.exports = app
