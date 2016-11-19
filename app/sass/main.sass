@@ -178,6 +178,13 @@ header
 			font-size: 0.8rem
 			color: lighten(#313131,50%)
 
+.description-wrapper--edicion
+  padding-bottom: 1.5rem
+
+  &:after
+    display: none
+
+
 .speakers
 	padding: 50px 40px
 
@@ -207,16 +214,22 @@ header
 		margin-bottom: 12px
 
 .speaker__title
-	font-size: 1.4rem
-	line-height: 1.2
-	font-weight: 600
-	color: $lighter-purple
-	font-family: $title-font
-	text-transform: uppercase
-	letter-spacing: 0.3px
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
-	margin: 0
+  font-size: 1.4rem
+  line-height: 1.2
+  font-weight: 600
+  color: $lighter-purple
+  font-family: $title-font
+  text-transform: uppercase
+  letter-spacing: 0.3px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  margin: 0
+
+  & > a
+    color: $purple
+    display: inline-block
+    margin-left: 0.5rem
+    font-size: 0.9em
 
 .speaker__speaker-name
 	font-size: 1.1rem
@@ -295,3 +308,108 @@ footer
 
 	.green-button
 		height: 50px
+
+
+// Edition List
+.edition-list
+  background: $light-gray
+  margin: auto
+  padding: 5rem 2rem
+
+  h2
+    text-align: center
+    margin: 0 0 2.5rem
+    color: $lighter-purple
+    font-size: 1.8rem
+
+.edition-item
+  display: block
+  max-width: 500px
+  margin: auto
+  padding: 2rem
+  background: $white
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2)
+  
+  & + .edition-item
+    margin-top: 1.2rem
+  
+  &:hover
+    background: #fdfdfd
+
+.edition-item__version
+  margin: 0
+  color: $black
+  font-size: 1.2rem
+  margin-right: 0.7rem
+
+
+.edition-item__date
+  font-style: italic
+  font-weight: 100
+  font-size: 0.9rem
+  margin-top: 0.4rem
+  margin-bottom: 0.2rem
+  color: #aaa
+
+
+.edition-item__charlantes
+  padding: 0.3rem 0 0
+  font-weight: normal
+  line-height: 1.4
+  font-size: 0.9rem
+  
+.edition-item__charlante
+  display: inline-block
+
+  &+.edition-item__charlante
+    margin-left: 0.1rem
+
+  &:hover
+    text-decoration: underline
+
+.edition-item__title
+  font-weight: 100
+  color: #555
+
+// Edition Page
+.edition__vertion
+  margin-bottom: -2.5rem
+  color: $lighter-purple
+  font-size: 2.7rem
+
+.edition__details
+  text-align: center
+  padding-top: 1rem
+  
+  & > a
+    font-size: 0.9rem
+    display: inline-block
+
+    & + a
+      margin-left: 1rem
+
+.edition__iframe
+  border: none
+  margin: 1.5rem 0
+
+.edition__video
+  color:  #E62117
+
+  .icon-youtube
+    font-size: 1.5em
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    top: -0.1em
+    margin-right: 0.2rem
+
+.edition__paper
+  color:  #0070E0
+
+  .icon-paper
+    font-size: 1.2em
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    top: -0.1em
+    margin-right: 0.2rem

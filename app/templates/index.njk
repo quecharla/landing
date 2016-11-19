@@ -1,3 +1,4 @@
+{% import "partials/edition-date-time.njk" as editionDT %}
 {% extends "layout/base.njk" %}
 
 {% block header %}
@@ -15,10 +16,11 @@
 
 {% block content %}
   <div class="centered description-wrapper" {% if not proximaEdicion.yaPaso %}data-next-date="{{ proximaEdicion.fechaString }}"{% endif %} {% if proximaEdicion.streamingUrl %}data-streaming-url="{{proximaEdicion.streamingUrl}}"{% endif %}>
-    <h3>Nos {% if proximaEdicion.yaPaso %}vimos{% else %}vemos{% endif %} aquí el {{ proximaEdicion.fecha.getDate() }} de {{meses[proximaEdicion.fecha.getMonth()]}} a las <span class="to-timezone" data-time="{{ proximaEdicion.fechaString }}" target="_blank" href="#">{{proximaEdicion.hora}} COT</span></h3>
+    <h3>Nos {% if proximaEdicion.yaPaso %}vimos{% else %}vemos{% endif %} aquí el {{ editionDT.getEditionDateHumanized(proximaEdicion, meses) }}</h3>
     <p>Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.</p>
     <p>Nos regimos por el <a href="/codigo-de-conducta">código de conducta de char.la</a></p>
     <p class="caption">Somos un evento comunitario y sin ánimo de lucro.</p>
   </div>
   {% include "partials/charlantes.njk" %}
+  {% include "partials/previous-versions.njk" %}
 {% endblock %}

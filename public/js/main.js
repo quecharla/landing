@@ -50,8 +50,19 @@
 
 	__webpack_require__(6);
 
-	var arrow = document.getElementById('scroll-header');
-	var windowHeight = window.innerHeight;
+	var _jquery = __webpack_require__(2);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var arrow = (0, _jquery2.default)('#scroll-header');
+	var windowHeight = (0, _jquery2.default)(window).height();
+
+	(0, _jquery2.default)('[data-href]').on('click', function (e) {
+	  window.open((0, _jquery2.default)(e.target).data('href'));
+	  return false;
+	});
 
 	function actionScroll() {
 	  scrollTo(document.body, windowHeight, 200);
@@ -70,9 +81,7 @@
 	  }, 10);
 	}
 
-	if (arrow) {
-	  arrow.addEventListener('click', actionScroll, false);
-	}
+	arrow.on('click', actionScroll);
 
 /***/ },
 /* 1 */

@@ -1,12 +1,24 @@
+{% import "partials/edition-date-time.njk" as editionDT %}
 {% extends "layout/base.njk" %}
 
-{% block header %}{% endblock %}
-
 {% block content %}
-  <div class="centered description-wrapper">
-    <h3>Realizada el {{ edicion.fecha.getDate() }} de {{meses[edicion.fecha.getMonth()]}} a las <span class="to-timezone" data-time="{{ edicion.fechaString }}" target="_blank" href="#">{{edicion.hora}} COT</span></h3>
-    <p>Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.</p>
-    <p class="caption">Somos un evento comunitario y sin ánimo de lucro</p>
+  <h1 class="edition__vertion">v{{ edicion.version }}</h1>
+  <div class="centered description-wrapper description-wrapper--edicion">
+    <h3>Realizada el {{ editionDT.getEditionDateHumanized(edicion, meses) }}</h3>
+    {% if edicion.videoUrl %}
+    <iframe class="edition__iframe" type="text/html" allowfullscreen="" width="100%" height="419" src="{{ edicion.embedUrl }}?frameborder=0&amp;start=0&amp;rel=0"></iframe>
+    {% endif %}
+    {% if edicion.videoUrl or edicion.preguntasUrl %}
+    <div class="edition__details">
+      {% if edicion.videoUrl %}
+        <a href="{{ edicion.videoUrl }}" class="edition__video" target="_blank"><span class="icon-youtube"></span> Video en Youtube</a>
+      {% endif %}
+      {% if edicion.preguntasUrl %}
+        <a href="{{ edicion.preguntasUrl }}" class="edition__paper" target="_blank"><span class="icon-paper"></span> Preguntas y Respuestas</a>
+      {% endif %}
+    </div>
+    {% endif %}
   </div>
   {% include "partials/charlantes.njk" %}
+  {% include "partials/previous-versions.njk" %}
 {% endblock %}

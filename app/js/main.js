@@ -1,8 +1,14 @@
 import './countdown'
 import './timeZone'
+import $ from 'jquery'
 
-const arrow = document.getElementById('scroll-header')
-const windowHeight = window.innerHeight
+const arrow = $('#scroll-header')
+const windowHeight = $(window).height()
+
+$('[data-href]').on('click', (e) => {
+  window.open($(e.target).data('href'))
+  return false
+})
 
 function actionScroll () {
   scrollTo(document.body, windowHeight, 200)
@@ -21,6 +27,4 @@ function scrollTo (elem, to, duration) {
   }, 10)
 }
 
-if (arrow) {
-  arrow.addEventListener('click', actionScroll, false)
-}
+arrow.on('click', actionScroll)

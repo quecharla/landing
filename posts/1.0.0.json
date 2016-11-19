@@ -2,27 +2,34 @@
   "fecha"       : "2016-11-15T20:00:00-05:00",
   "streamingUrl": "http://bit.ly/charla-v1",
   "videoUrl"    : "https://www.youtube.com/watch?v=xeos_GggoMk",
+  "embedUrl"    : "https://www.youtube.com/embed/xeos_GggoMk",
+  "preguntasUrl": "https://paper.dropbox.com/doc/Links-y-Preguntas-Char.la-v1.0.0-TJE0WJrQNb0bhxeUy67UB",
   "charlantes"  : [
     {
       "nombre"   : "Nicolás Fernández",
       "twitter"  : "elBuraBure",
       "titulo"   : "Testeando React",
       "subtitulo": "En esta Charla quiero mostrarles como testeamos una aplicacion de React con mas de un millon de lineas de codigo y lo mantenemos simple y limpio.",
-      "avatar"   : "https://camo.githubusercontent.com/0e7fcf0953dc23f8994d27a5a3a7ef5883e97fad/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3633313438383537303539313638323536302f63314434535233502e6a7067"
+      "avatar"   : "https://camo.githubusercontent.com/0e7fcf0953dc23f8994d27a5a3a7ef5883e97fad/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3633313438383537303539313638323536302f63314434535233502e6a7067",
+      "slides"   : "https://docs.google.com/presentation/d/1qdZAazYusc7tOBFZCjd7A704-Se-OAcXbWJoQS2ZwR0",
+      "repo"     : "https://github.com/burabure/react-testing"
     },
     {
       "nombre"   : "Verónica López",
       "twitter"  : "verolopg",
       "titulo"   : "Sistemas distribuidos con Go",
       "subtitulo": "",
-      "avatar"   : "https://pbs.twimg.com/profile_images/783664209099763712/4dM4hohr.jpg"
+      "avatar"   : "https://pbs.twimg.com/profile_images/783664209099763712/4dM4hohr.jpg",
+      "slides"   : "https://speakerdeck.com/fib/introduccion-a-los-sistemas-distribuidos-con-go"
     },
     {
       "nombre"   : "Damian Schenkelman",
       "twitter"  : "dschenkelman",
       "titulo"   : "Crónica de una Escala Anunciada",
       "subtitulo": "En la charla contare un caso de estudio en el que en Auth0 encontramos un problema de escalabiliad con username/password logins en Node.js.",
-      "avatar"   : "https://camo.githubusercontent.com/2491428a442c30bd0b0843e43e071ded0c10007e/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3438333938303330383236363531323338342f2d6c6c4b73754d392e6a706567"
+      "avatar"   : "https://camo.githubusercontent.com/2491428a442c30bd0b0843e43e071ded0c10007e/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3438333938303330383236363531323338342f2d6c6c4b73754d392e6a706567",
+      "slides"   : "https://github.com/dschenkelman/bcrypt-sample/tree/espanol",
+      "repo"     : "https://github.com/dschenkelman/bcrypt-sample/tree/espanol"
     }
   ]
 }

@@ -65,7 +65,7 @@ para los próximos eventos, las propiedades son las siguientes:
 | preguntasUrl | String URL      | **OPCIONAL** Url al archivo con las preguntas y respuestas de la charla |
 | streamingUrl | String URL      | **OPCIONAL** URL del streaming, si hay URL de streaming y han pasado menos 3 horas desde la `fecha` en el sitio se pone `Transmisión en Vivo` |
 | videoUrl     | String URL      | **OPCIONAL** URL del video en Youtube |
-
+| embedUrl     | String URL      | **OPCIONAL** URL del video en formato para embeber de Youtube, **sin parámetros** |
 ### Charlante
 
 | Prop            | Tipo       | Descripción     |
@@ -76,7 +76,7 @@ para los próximos eventos, las propiedades son las siguientes:
 | subtitulo       | String     | **OPCIONAL**    |
 | avatar          | String URL | Pasa por cloudinary, lo recomendable es pasar una imagen cuadrada y grande |
 | videoUrl        | String URL | **OPCIONAL** URL del video en Youtube de la charla del speaker |
-| presentacionUrl | String URL | **OPCIONAL** URL a la presentación
+| slides          | String URL | **OPCIONAL** URL a la presentación
 
 
 ## Comportamiento y características
@@ -116,7 +116,8 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 - [ ] Soportar `preguntasUrl` en la página de la versión
 - [ ] Soportar `videoUrl` en la página de la versión
 - [ ] Soportar `videoUrl` en el speaker
-- [ ] Soportar `presentacionUrl` en el speaker
+- [ ] Soportar `slides` en el speaker
+- [ ] Soportar `embedUrl` en la versión
 
 
 ## Licencia
