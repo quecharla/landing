@@ -1,8 +1,7 @@
 {
   "fecha"       : "2016-11-15T20:00:00-05:00",
   "streamingUrl": "http://bit.ly/charla-v1",
-  "videoUrl"    : "https://www.youtube.com/watch?v=xeos_GggoMk",
-  "embedUrl"    : "https://www.youtube.com/embed/xeos_GggoMk",
+  "videoId"    : "xeos_GggoMk",
   "preguntasUrl": "https://paper.dropbox.com/doc/Links-y-Preguntas-Char.la-v1.0.0-TJE0WJrQNb0bhxeUy67UB",
   "charlantes"  : [
     {

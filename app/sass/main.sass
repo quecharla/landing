@@ -54,31 +54,32 @@ header
   font-size: 0.8rem
 
 .top-bar
-	height: 62px
-	text-align: right
-	padding: 20px
-	box-sizing: border-box
-	background: transparent
-	width: 100%
-	-webkit-transition: background 0.3s
-	transition: background 0.3s
+  height: 62px
+  text-align: right
+  padding: 20px
+  box-sizing: border-box
+  background: transparent
+  width: 100%
+  -webkit-transition: background 0.3s
+  transition: background 0.3s
 
-	.twitter-link
-		float: right
-		color: $white
-		font-size: 25px
-		margin-left: 10px
-		font-size: 21px
+  .twitter-link,
+  .youtube-link
+    float: right
+    color: $white
+    font-size: 25px
+    margin-left: 10px
+    font-size: 21px
 
-		&:hover
-			color: $color-links
+    &:hover
+      color: $color-links
 
-	.__slackin
-		float: right
-		z-index: 12
+  .__slackin
+    float: right
+    z-index: 12
 
-		button 
-			color: $purple
+    button 
+      color: $purple
 
 
 .logo
@@ -270,6 +271,15 @@ footer
 		margin-bottom: 23px
 		font-weight: 100
 		-webkit-font-smoothing: antialiased
+
+.footer__links
+  font-size: 1.3rem
+  & > a
+    color: white
+    display: inline-block
+
+    & + a
+      margin-left: 1rem
 
 .subscription-text
 	color: $white

@@ -64,8 +64,7 @@ para los próximos eventos, las propiedades son las siguientes:
 | fecha        | ISO Date String | La fecha está en formato ISO Date, por comodidad se usa con GMT-5: `2016-11-15T20:00:00-05:00` para poder poner la hora local, si queda menos de un día se pone `Dentro de Poco` |
 | preguntasUrl | String URL      | **OPCIONAL** Url al archivo con las preguntas y respuestas de la charla |
 | streamingUrl | String URL      | **OPCIONAL** URL del streaming, si hay URL de streaming y han pasado menos 3 horas desde la `fecha` en el sitio se pone `Transmisión en Vivo` |
-| videoUrl     | String URL      | **OPCIONAL** URL del video en Youtube |
-| embedUrl     | String URL      | **OPCIONAL** URL del video en formato para embeber de Youtube, **sin parámetros** |
+| videoId      | String URL      | **OPCIONAL** Id del video en Youtube para embeber y vincular, por ej: `xeos_GggoMk` |
 ### Charlante
 
 | Prop            | Tipo       | Descripción     |
@@ -75,7 +74,7 @@ para los próximos eventos, las propiedades son las siguientes:
 | titulo          | String     |                 |
 | subtitulo       | String     | **OPCIONAL**    |
 | avatar          | String URL | Pasa por cloudinary, lo recomendable es pasar una imagen cuadrada y grande |
-| videoUrl        | String URL | **OPCIONAL** URL del video en Youtube de la charla del speaker |
+| videoId         | String URL | **OPCIONAL** Id del video en Youtube para embeber y vincular |
 | slides          | String URL | **OPCIONAL** URL a la presentación
 
 
@@ -113,11 +112,8 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 ## TODO
 
-- [ ] Soportar `preguntasUrl` en la página de la versión
-- [ ] Soportar `videoUrl` en la página de la versión
-- [ ] Soportar `videoUrl` en el speaker
+- [ ] Soportar `videoId` en el speaker
 - [ ] Soportar `slides` en el speaker
-- [ ] Soportar `embedUrl` en la versión
 
 
 ## Licencia

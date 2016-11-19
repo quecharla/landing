@@ -5,13 +5,13 @@
   <h1 class="edition__vertion">v{{ edicion.version }}</h1>
   <div class="centered description-wrapper description-wrapper--edicion">
     <h3>Realizada el {{ editionDT.getEditionDateHumanized(edicion, meses) }}</h3>
-    {% if edicion.videoUrl %}
-    <iframe class="edition__iframe" type="text/html" allowfullscreen="" width="100%" height="419" src="{{ edicion.embedUrl }}?frameborder=0&amp;start=0&amp;rel=0"></iframe>
+    {% if edicion.videoId %}
+    <iframe class="edition__iframe" type="text/html" allowfullscreen="" width="100%" height="419" src="https://www.youtube.com/embed/{{ edicion.videoId }}?frameborder=0&amp;start=0&amp;rel=0"></iframe>
     {% endif %}
-    {% if edicion.videoUrl or edicion.preguntasUrl %}
+    {% if edicion.videoId or edicion.preguntasUrl %}
     <div class="edition__details">
-      {% if edicion.videoUrl %}
-        <a href="{{ edicion.videoUrl }}" class="edition__video" target="_blank"><span class="icon-youtube"></span> Video en Youtube</a>
+      {% if edicion.videoId %}
+        <a href="https://www.youtube.com/watch?v={{ edicion.videoId }}" class="edition__video" target="_blank"><span class="icon-youtube"></span> Video en Youtube</a>
       {% endif %}
       {% if edicion.preguntasUrl %}
         <a href="{{ edicion.preguntasUrl }}" class="edition__paper" target="_blank"><span class="icon-paper"></span> Preguntas y Respuestas</a>

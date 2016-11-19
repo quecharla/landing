@@ -1,9 +1,8 @@
 {
   "fecha"       : "2016-11-15T20:00:00-05:00",
-  "embedUrl"    : "https://www.youtube.com/embed/xeos_GggoMk",
+  "videoId"     : "xeos_GggoMk",
   "preguntasUrl": "https://url/al/paper/o/drive",
   "streamingUrl": "http://bit.ly/charla-v1",
-  "videoUrl"    : "https://www.youtube.com/watch?v=xeos_GggoMk",
   "charlantes"  : [
     {
       "nombre"         : "Nombre Charlante Uno",
@@ -11,7 +10,7 @@
       "titulo"         : "Título Charla Uno",
       "subtitulo"      : "Subtítulo corto",
       "avatar"         : "https://camo.githubusercontent.com/0e7fcf0953dc23f8994d27a5a3a7ef5883e97fad/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3633313438383537303539313638323536302f63314434535233502e6a7067",
-      "videoUrl"       : "https://www.youtube.com/watch?v=xeos_GggoMk",
+      "videoId"        : "https://www.youtube.com/watch?v=xeos_GggoMk",
       "presentacionUrl": "https://url/slides"
     },
     {
@@ -20,7 +19,7 @@
       "titulo"         : "Título Charla Dos",
       "subtitulo"      : "Subtítulo corto",
       "avatar"         : "https://camo.githubusercontent.com/0e7fcf0953dc23f8994d27a5a3a7ef5883e97fad/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3633313438383537303539313638323536302f63314434535233502e6a7067",
-      "videoUrl"       : "https://www.youtube.com/watch?v=xeos_GggoMk",
+      "videoId"        : "https://www.youtube.com/watch?v=xeos_GggoMk",
       "presentacionUrl": "https://url/slides"
     },
     {
@@ -29,7 +28,7 @@
       "titulo"         : "Título Charla Tres",
       "subtitulo"      : "Subtítulo corto",
       "avatar"         : "https://camo.githubusercontent.com/0e7fcf0953dc23f8994d27a5a3a7ef5883e97fad/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f3633313438383537303539313638323536302f63314434535233502e6a7067",
-      "videoUrl"       : "https://www.youtube.com/watch?v=xeos_GggoMk",
+      "videoId"        : "https://www.youtube.com/watch?v=xeos_GggoMk",
       "presentacionUrl": "https://url/slides"
     }
   ]
