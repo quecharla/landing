@@ -1,0 +1,23 @@
+{% import "partials/edition-date-time.njk" as editionDT %}
+<nav class="edition-list">
+  <h2>Versiones Anteriores</h2>
+  {% for edicion in previous %}
+  <a href="/{{ edicion.version }}" class="edition-item">
+    <h3 class="edition-item__version">v{{ edicion.version }}</h3>
+    <div class="edition-item__date">{{ edicion.fechaString }}</div>
+    <div class="edition-item__charlantes">
+      {% for speaker in edicion.charlantes %}
+      <span class="edition-item__charlante" data-href="https://twitter.com/{{speaker.twitter}}">
+        @{{ speaker.twitter }}
+      </span>:
+      <span class="edition-item__title" >
+        {{ speaker.titulo }}
+      </span>
+      {% if not loop.last %}
+      <br>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </a>
+  {% endfor %}
+</nav>

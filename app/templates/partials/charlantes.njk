@@ -6,7 +6,15 @@
         <img src="{{speaker.avatar}}" alt="{{ speaker.nombre }}">
       </a>
       <div class="speaker__description-talk">
-        <h2 class="speaker__title">{{ speaker.titulo }}</h2>
+        <h2 class="speaker__title">
+          {{ speaker.titulo }}
+          {% if speaker.slides %}
+            <a href="{{ speaker.slides }}" class="icon-slides" target="_blank"></a>
+          {% endif %}
+          {% if speaker.repo %}
+            <a href="{{ speaker.repo }}" class="icon-github" target="_blank"></a>
+          {% endif %}
+        </h2>
         <a class="speaker__speaker-name" href="https://twitter.com/{{speaker.twitter}}" target="_blank">
           {{ speaker.nombre }}
         </a>

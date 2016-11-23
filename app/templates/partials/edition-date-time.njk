@@ -1,0 +1,6 @@
+{% macro getEditionDateHumanized(edicion, meses, prefix=false) -%}
+  {% if prefix %}
+    {% if edicion.yaPaso %}fue{% else %}será{% endif %} el 
+  {% endif %}
+  {{ edicion.fecha.getDate() }} de {{meses[edicion.fecha.getMonth()]}} a las <span class="to-timezone" data-time="{{ edicion.fechaString }}" target="_blank" href="#">{{edicion.hora}} COT</span>
+{%- endmacro %}
