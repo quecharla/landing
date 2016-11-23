@@ -75,7 +75,7 @@ para los próximos eventos, las propiedades son las siguientes:
 | subtitulo       | String     | **OPCIONAL**    |
 | avatar          | String URL | Pasa por cloudinary, lo recomendable es pasar una imagen cuadrada y grande |
 | videoId         | String URL | **OPCIONAL** Id del video en Youtube para embeber y vincular |
-| slides          | String URL | **OPCIONAL** URL a la presentación
+| slides          | String URL | **OPCIONAL** URL a la presentación |
 
 
 ## Comportamiento y características
