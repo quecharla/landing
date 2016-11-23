@@ -8,7 +8,7 @@
     "server": "node server",
     "server:watch": "nodemon server.js -w posts -w server.js -w app/templates -e js,njk,html,json",
     "server:watchall": "nodemon server.js -w app -w public -w posts -w server.js -e css,js,njk,html,sass,json",
-    "postinstall": "gulp production"
+    "postinstall": "gulp distribution"
   },
   "pre-commit": [
     "test"
