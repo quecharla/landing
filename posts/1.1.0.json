@@ -2,5 +2,12 @@
   "fecha": "2017-01-10T20:00:00-05:00",
   "streamingUrl": "http://bit.ly/charla-v1",
   "charlantes": [
+    {
+      "nombre"   : "Adrián Catalán",
+      "twitter"  : "ykro",
+      "titulo"   : "Inyección de dependencias en Android",
+      "subtitulo": "Inyección de dependencias pareciera ser un tema complejo sin embargo es un patrón que usamos seguido, muchas veces sin darnos cuenta. Al comprenderlo, enriquecemos nuestras herramientas y podemos aprovecharlo de mejor forma. En la charla veremos que es y como usar inyección de dependencias, como se relaciona con el principio de inversión de dependencias y como se utiliza en Android con Dagger 2.",
+      "avatar"   : "https://avatars3.githubusercontent.com/u/398169?v=3&s=460"
+    }
   ]
 }
