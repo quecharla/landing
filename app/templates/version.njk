@@ -1,4 +1,5 @@
 {% import "partials/edition-date-time.njk" as editionDT %}
+{% import "partials/charlantes.njk" as charlantes %}
 {% extends "layout/base.njk" %}
 
 {% block content %}
@@ -19,6 +20,6 @@
     </div>
     {% endif %}
   </div>
-  {% include "partials/charlantes.njk" %}
+  {{ charlantes.render(edicion) }}
   {% include "partials/previous-versions.njk" %}
 {% endblock %}

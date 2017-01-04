@@ -1,4 +1,5 @@
 {% import "partials/edition-date-time.njk" as editionDT %}
+{% import "partials/charlantes.njk" as charlantes %}
 {% extends "layout/base.njk" %}
 
 {% block header %}
@@ -22,6 +23,6 @@
     <p>Nos regimos por el <a href="/codigo-de-conducta">código de conducta de char.la</a></p>
     <p class="caption">Somos un evento comunitario y sin ánimo de lucro.</p>
   </div>
-  {% include "partials/charlantes.njk" %}
+  {{ charlantes.render(proximaEdicion) }}
   {% include "partials/previous-versions.njk" %}
 {% endblock %}
