@@ -58,3 +58,15 @@ test('Version inválida', async t => {
 
   t.is(res.status, 404)
 })
+
+test('Letsencrypt', async t => {
+  t.plan(2)
+  const { LETSENCRYPT_VALUE } = process.env
+  const res = await request(app)
+    // we imagine llaveria is they key
+    .get('/.well-known/acme-challenge/llaveria')
+    .send()
+
+  t.is(res.status, 200)
+  t.is(res.text, `llaveria.${LETSENCRYPT_VALUE}`)
+})

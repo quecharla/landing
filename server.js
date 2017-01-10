@@ -4,6 +4,7 @@ const fs = require('fs')
 const nunjucks = require('nunjucks')
 const semverSort = require('semver-sort')
 const utils = require('./lib/utils')
+const letsencrypt = require('./lib/letsencrypt')
 
 const POSTS_DIR = './posts'
 const PORT = process.env.PORT || 8080
@@ -16,7 +17,7 @@ const duraciónTransmisión = 3 * 60 * 60 * 1000 // 3 horas que dura la transmis
 process.env.TZ = 'America/Bogota'
 
 let versions = fs.readdirSync(POSTS_DIR)
-      .filter(file => /^[\d\.]+\.json$/.test(file))
+      .filter(file => /^[\d.]+\.json$/.test(file))
       .map(file => file.replace(/\.json$/, ''))
 
 const ediciones = semverSort.desc(versions)
@@ -100,6 +101,9 @@ app.get('/coc', renderCoC)
 app.get('/propuesta', function (req, res) {
   res.render('propuesta.njk')
 })
+
+// Let's encrypt challenge
+app.get('/.well-known/acme-challenge/:key', letsencrypt)
 
 // Ver una versión
 app.get('/:version', function (req, res) {
