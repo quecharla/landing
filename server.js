@@ -5,6 +5,7 @@ const nunjucks = require('nunjucks')
 const semverSort = require('semver-sort')
 const utils = require('./lib/utils')
 const letsencrypt = require('./lib/letsencrypt')
+const forceSSL = require('express-force-ssl')
 
 const POSTS_DIR = './posts'
 const PORT = process.env.PORT || 8080
@@ -87,6 +88,15 @@ function renderCoC (req, res) {
   res.render('coc.njk', agregarDataPorDefecto())
 }
 
+/**
+ * Renderiza el formulario de propuestas.
+ * @param  {Object} req request
+ * @param  {Object} res response
+ */
+function renderPropuesta (req, res) {
+  res.render('propuesta.njk')
+}
+
 // Inicio
 app.get('/', function (req, res) {
   res.render('index.njk', agregarDataPorDefecto())
@@ -98,9 +108,9 @@ app.get('/codigo-de-conducta', renderCoC)
 app.get('/coc', renderCoC)
 
 // Propuestas de charla
-app.get('/propuesta', function (req, res) {
-  res.render('propuesta.njk')
-})
+app.get('/propuesta', renderPropuesta)
+app.get('/propuestas', renderPropuesta)
+app.get('/cfp', renderPropuesta)
 
 // Let's encrypt challenge
 app.get('/.well-known/acme-challenge/:key', letsencrypt)
@@ -118,6 +128,8 @@ app.get('/:version', function (req, res) {
 })
 
 app.use(express.static('public'))
+
+app.use(forceSSL)
 
 app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}!`)
