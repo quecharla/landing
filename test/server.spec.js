@@ -61,7 +61,7 @@ test('Version inválida', async t => {
 
 test('Letsencrypt', async t => {
   t.plan(2)
-  const { LETSENCRYPT_VALUE } = process.env
+  const { LETSENCRYPT_VALUE } = process.env || 'paila'
   const res = await request(app)
     // we imagine llaveria is they key
     .get('/.well-known/acme-challenge/llaveria')
