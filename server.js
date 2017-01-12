@@ -114,6 +114,11 @@ app.get('/', function (req, res) {
   res.render('index.njk', agregarDataPorDefecto())
 })
 
+// Banners para el streaming
+app.get('/banners', function (req, res) {
+  res.render('video-assets.njk', agregarDataPorDefecto())
+})
+
 // CoC
 app.get('/code-of-conduct', renderCoC)
 app.get('/codigo-de-conducta', renderCoC)
