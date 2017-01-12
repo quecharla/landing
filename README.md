@@ -109,11 +109,16 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 <img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" width="200" />
 
+** Herramientas **
+
+Existe la vista `/banners` que genera los banners para los videos con los speakers que van para la siguiente edición (falta el telón)
+
+![banners](https://cldup.com/0HfCFy327o-3000x3000.png)
 
 ## TODO
 
 - [ ] Soportar `videoId` en el speaker
-- [ ] Soportar `slides` en el speaker
+- [ ] Generar el telón de la próxima edición
 
 
 ## Licencia
