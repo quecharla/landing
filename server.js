@@ -8,7 +8,7 @@ const letsencrypt = require('./lib/letsencrypt')
 
 const POSTS_DIR = './posts'
 const PORT = process.env.PORT || 8080
-const ENV = process.env.NODE_ENV || 'development'
+const NODE_ENV = process.env.NODE_ENV || 'development'
 const CLOUDINARY_URL = '//res.cloudinary.com/charla/image/fetch/c_fill,w_250,h_250/'
 const meses = 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre'.split(',')
 const app = express()
@@ -99,7 +99,7 @@ function renderPropuesta (req, res) {
 
 // Force HTTPS
 // http://stackoverflow.com/questions/7185074/heroku-nodejs-http-to-https-ssl-forced-redirect
-if (ENV !== 'development') {
+if (NODE_ENV !== 'development') {
   app.get('*', function (req, res, next) {
     if (req.headers['x-forwarded-proto'] !== 'https') {
       res.redirect(`https://${req.headers.host}${req.url}`)
