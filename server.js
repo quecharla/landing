@@ -8,6 +8,7 @@ const letsencrypt = require('./lib/letsencrypt')
 
 const POSTS_DIR = './posts'
 const PORT = process.env.PORT || 8080
+const NODE_ENV = process.env.NODE_ENV || 'development'
 const CLOUDINARY_URL = '//res.cloudinary.com/charla/image/fetch/c_fill,w_250,h_250/'
 const meses = 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre'.split(',')
 const app = express()
@@ -87,6 +88,27 @@ function renderCoC (req, res) {
   res.render('coc.njk', agregarDataPorDefecto())
 }
 
+/**
+ * Renderiza el formulario de propuestas.
+ * @param  {Object} req request
+ * @param  {Object} res response
+ */
+function renderPropuesta (req, res) {
+  res.render('propuesta.njk')
+}
+
+// Force HTTPS
+// http://stackoverflow.com/questions/7185074/heroku-nodejs-http-to-https-ssl-forced-redirect
+if (NODE_ENV !== 'development') {
+  app.get('*', function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      res.redirect(`https://${req.headers.host}${req.url}`)
+    } else {
+      next() /* Continue to other routes if we're not redirecting */
+    }
+  })
+}
+
 // Inicio
 app.get('/', function (req, res) {
   res.render('index.njk', agregarDataPorDefecto())
@@ -103,9 +125,9 @@ app.get('/codigo-de-conducta', renderCoC)
 app.get('/coc', renderCoC)
 
 // Propuestas de charla
-app.get('/propuesta', function (req, res) {
-  res.render('propuesta.njk')
-})
+app.get('/propuesta', renderPropuesta)
+app.get('/propuestas', renderPropuesta)
+app.get('/cfp', renderPropuesta)
 
 // Let's encrypt challenge
 app.get('/.well-known/acme-challenge/:key', letsencrypt)
