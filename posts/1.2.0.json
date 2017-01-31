@@ -1,0 +1,12 @@
+{
+  "fecha"       : "2016-02-21T20:00:00-05:00",
+  "charlantes"  : [
+    {
+      "nombre"         : "Gabriel Chertok",
+      "twitter"        : "iamcherta",
+      "titulo"         : "Flow - Static type checking for JavaScript",
+      "subtitulo"      : "Quisiera contar mi experiencia usando flow en apps javascript en general y React en particular.",
+      "avatar"         : "https://avatars1.githubusercontent.com/u/373454?v=3&s=400"
+    }
+  ]
+}
