@@ -2,6 +2,13 @@
   "fecha"       : "2017-02-21T20:00:00-05:00",
   "charlantes"  : [
     {
+      "nombre"         : "Cristian Gomez",
+      "twitter"        : "iyubinest",
+      "titulo"         : "Código limpio en la UI para Android, mejores prácticas",
+      "subtitulo"      : "",
+      "avatar"         : "https://pbs.twimg.com/profile_images/608381669310144513/osagbaim.jpg"
+    },
+    {
       "nombre"         : "Gabriel Chertok",
       "twitter"        : "iamcherta",
       "titulo"         : "Flow - Static type checking for JavaScript",
@@ -14,13 +21,6 @@
       "titulo"         : "Porque usar PostCSS",
       "subtitulo"      : "",
       "avatar"         : "https://cldup.com/acbK2lcfvc.thumb.png"
-    },
-    {
-      "nombre"         : "Giovanny Beltran",
-      "twitter"        : "agar3s",
-      "titulo"         : "TBD",
-      "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/717900643386716160/zuzIKhjM.jpg"
     }
   ]
 }
