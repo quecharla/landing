@@ -7,7 +7,6 @@ const sigFechaEl = document.querySelector('[data-next-date]')
 
 if (sigFechaEl) {
   const sigFechaStr = sigFechaEl.getAttribute('data-next-date')
-  const streamingUrl = sigFechaEl.getAttribute('data-streaming-url')
   const duraciónTransmisión = 3 * 60 * 60 * 1000 // 3 horas que dura la transmision
   const transmisión = new Date(sigFechaStr)
   const ahora = new Date()
@@ -15,9 +14,7 @@ if (sigFechaEl) {
 
   if (ahora < (+transmisión + duraciónTransmisión) &&
       transmisión - ahora < unDia) {
-    const regresivo = $(envivoBotonHtml.render({
-      streamingUrl
-    }))
+    const regresivo = $(envivoBotonHtml.render())
     $('header').append(regresivo)
     iniciarContador(transmisión, regresivo.find('#regresivo')[0])
   }

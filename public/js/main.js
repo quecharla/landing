@@ -103,16 +103,13 @@
 
 	if (sigFechaEl) {
 	  var sigFechaStr = sigFechaEl.getAttribute('data-next-date');
-	  var streamingUrl = sigFechaEl.getAttribute('data-streaming-url');
 	  var duraciónTransmisión = 3 * 60 * 60 * 1000; // 3 horas que dura la transmision
 	  var transmisión = new Date(sigFechaStr);
 	  var ahora = new Date();
 	  var unDia = 24 * 60 * 60 * 1000;
 
 	  if (ahora < +transmisión + duraciónTransmisión && transmisión - ahora < unDia) {
-	    var regresivo = (0, _jquery2.default)(_liveButton2.default.render({
-	      streamingUrl: streamingUrl
-	    }));
+	    var regresivo = (0, _jquery2.default)(_liveButton2.default.render());
 	    (0, _jquery2.default)('header').append(regresivo);
 	    iniciarContador(transmisión, regresivo.find('#regresivo')[0]);
 	  }
@@ -10393,17 +10390,7 @@
 	var output = "";
 	try {
 	var parentTemplate = null;
-	if(runtime.contextOrFrameLookup(context, frame, "streamingUrl")) {
-	output += "\n  <a href=\"";
-	output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "streamingUrl"), env.opts.autoescape);
-	output += "\" target=\"blank\" class=\"en-vivo\">\n    ⚡️⚡️⚡️<wbr>Transmisión en Vivo<wbr>⚡️⚡️⚡️\n    <div id=\"regresivo\" class=\"cuenta-regresiva\"></div>\n  </a>\n";
-	;
-	}
-	else {
-	output += "\n  <span class=\"casi-en-vivo\">\n    Dentro de Poco\n    <div id=\"regresivo\" class=\"cuenta-regresiva\"></div>\n  </span>\n";
-	;
-	}
-	output += "\n";
+	output += "<a href=\"https://youtube.com/c/Charlando/live\" target=\"blank\" class=\"en-vivo\">\n  ⚡️⚡️⚡️<wbr>Transmisión en Vivo<wbr>⚡️⚡️⚡️\n  <div id=\"regresivo\" class=\"cuenta-regresiva\"></div>\n</a>\n";
 	if(parentTemplate) {
 	parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 	} else {
