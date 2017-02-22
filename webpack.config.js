@@ -2,7 +2,10 @@ const path = require('path')
 
 module.exports = {
   context: path.resolve('app/js'),
-  entry: './main',
+  entry: {
+    main: './main',
+    banners: './banners'
+  },
   resolve: {
     extensions: ['', '.json', '.jsx', '.js'],
     root: [
@@ -11,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve('public/js'),
-    filename: 'main.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [
