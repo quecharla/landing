@@ -116,7 +116,9 @@ app.get('/', function (req, res) {
 
 // Banners para el streaming
 app.get('/banners', function (req, res) {
-  res.render('video-assets.njk', agregarDataPorDefecto())
+  res.render('video-assets.njk', {
+    proximaEdicion: nextEdition
+  })
 })
 
 // CoC

@@ -2,130 +2,26 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Banners de la Char.la</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <style>
     canvas {
       width: 440px;
       height: 160px;
+    }
+    canvas.telon {
+      width: 1280px;
+      height: 720px;
     }
     img {
       display: block;
       margin: 30px;
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 </head>
-<body data-charlantes='{{ proximaEdicion.charlantes | dump }}'>
-  <script>
-    function addSpeakerCard (speaker) {
-      const canvas = document.createElement('canvas')
-      const ratio = 2.2
-      const width = 440
-      const height = 160
-      canvas.width = width * ratio
-      canvas.height = height * ratio
-      // si quieres renderizar el canvas:
-      // document.querySelector('#wrapper').appendChild(canvas)
-
-      const ctx = canvas.getContext('2d')
-      ctx.scale(ratio, ratio)
-      
-      // Gradient
-      const grd = ctx.createLinearGradient(0,0,width,0)
-      grd.addColorStop(0,'#1e1032')
-      grd.addColorStop(1,'#452873')
-      ctx.fillStyle = grd
-      ctx.fillRect(0, 0, width, height)
-      
-      // Path Fondo
-      const path = new Path2D('M309,249.9c-29.4,44.3-80.2,80.4-133.4,80.4c-87,0-158.6-71.7-158.6-158.7S88.6,12.9,175.7,12.9 c53.9,0,104.2,27.4,133.4,72.7c0,0-104.4,51.3-116.9,51.6c-4.1,0.1-14.5,0.4-21.7,0.3c-14.7,0-26,0.1-35.2,3.7 c-19.4,8.6-20.8,42.3,2.4,51c7.6,2.6,10.7,1.6,18.4,2.8l8.8,0.7L165,237l24.5,0.4v-39.3l5.6,0.6C206.8,202.8,309,249.9,309,249.9')
-      ctx.translate(-70, -90)
-      ctx.fillStyle = '#1e1032'
-      ctx.fill(path)
-      ctx.translate(70, 90)
-      
-      // Path Logito
-      const path2 = new Path2D('M309,249.9c-29.4,44.3-80.2,80.4-133.4,80.4c-87,0-158.6-71.7-158.6-158.7S88.6,12.9,175.7,12.9 c53.9,0,104.2,27.4,133.4,72.7c0,0-104.4,51.3-116.9,51.6c-4.1,0.1-14.5,0.4-21.7,0.3c-14.7,0-26,0.1-35.2,3.7 c-19.4,8.6-20.8,42.3,2.4,51c7.6,2.6,10.7,1.6,18.4,2.8l8.8,0.7L165,237l24.5,0.4v-39.3l5.6,0.6C206.8,202.8,309,249.9,309,249.9')
-      ctx.save()
-      ctx.translate(383, 20)
-      ctx.scale(0.11, 0.11)
-      ctx.fillStyle = 'rgba(255,255,255,0.7)'
-      ctx.fill(path2)
-      ctx.restore()
-
-      // Text Name
-      ctx.textBaseline = 'middle'
-      ctx.font = '22px "Open Sans"'
-      ctx.fillStyle = 'white'
-      ctx.fillText(speaker.nombre, 30, 40, width - 60)
-
-      // Text Twitter
-      ctx.font = '18px "Open Sans"'
-      ctx.fillStyle = 'rgb(19,168,176)'
-      ctx.fillText('@' + speaker.twitter, 30, 73, width - 80)
-
-      // Text Name
-      ctx.textBaseline = 'middle'
-      ctx.font = '300 18px "Open Sans"'
-      ctx.fillStyle = 'white'
-      const limitM = 20
-      const maxLimitM = 35
-      const lastSpace = speaker.titulo.indexOf(' ', limitM)
-      const lines = breakInLines(speaker.titulo, ctx.font, width - 60)
-
-      if (lines.length > 1) {
-        const secondLine = lines[1] + (lines.length > 2 ? '...' : '')
-        ctx.fillText(lines[0], 30, 106, width - 60)
-        ctx.fillText(secondLine, 30, 130, width - 60)
-      } else {
-        ctx.fillText(lines[0], 30, 115, width - 60)
-      }
-
-      const image2x = new Image()
-      image2x.src = canvas.toDataURL("image/png")
-
-      const hiddenCanvas = document.createElement('canvas')
-      const ctxHiddenCanvas = hiddenCanvas.getContext('2d')
-      hiddenCanvas.width = width
-      hiddenCanvas.height = height
-      ctxHiddenCanvas.drawImage(image2x, 0, 0, width, height)
-
-      const resultImage = new Image()
-      resultImage.src = hiddenCanvas.toDataURL("image/png")
-      document.body.appendChild(resultImage)
-    }
-
-    function breakInLines (str, font, maxWidth) {
-      const el = document.createElement('div')
-      const style = el.style
-      style.position = 'absolute'
-      style.top = 0
-      style.left = 0
-      style.font = font
-      document.body.appendChild(el)
-
-      let index = 1
-      let lastSpace = 0
-      let start = 0
-      let response = []
-
-      while (index < str.length) {
-        el.innerHTML = str.substring(start, index)
-        if (el.offsetWidth > maxWidth) {
-          response.push(str.substring(start, lastSpace))
-          start = lastSpace + 1
-          index = start + 1
-        }
-        if (str[index] === ' ') {
-          lastSpace = index
-        }
-        index++
-      }
-      response.push(str.substr(start))
-      document.body.removeChild(el)
-      return response
-    }
-    const charlantes = JSON.parse(document.body.dataset.charlantes)
-    charlantes.forEach(addSpeakerCard)
-  </script>
+<body 
+  data-charlantes='{{ proximaEdicion.charlantes | dump }}'
+  data-fecha='{{ proximaEdicion.fechaString }}'
+  data-version='{{ proximaEdicion.version }}'>
+  <script src="/js/banners.js"></script>
 </body>
 </html>
