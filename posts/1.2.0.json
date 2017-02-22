@@ -1,5 +1,6 @@
 {
   "fecha"       : "2017-02-21T20:00:00-05:00",
+  "streamingUrl": "https://youtube.com/c/Charlando/live",
   "charlantes"  : [
     {
       "nombre"         : "Cristian Gomez",
