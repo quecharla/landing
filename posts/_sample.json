@@ -2,7 +2,6 @@
   "fecha"       : "2016-11-15T20:00:00-05:00",
   "videoId"     : "xeos_GggoMk",
   "preguntasUrl": "https://url/al/paper/o/drive",
-  "streamingUrl": "http://bit.ly/charla-v1",
   "charlantes"  : [
     {
       "nombre"         : "Nombre Charlante Uno",
