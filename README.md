@@ -63,7 +63,6 @@ para los próximos eventos, las propiedades son las siguientes:
 | charlantes   | Array           | Arreglo de los charlantes de la edición |
 | fecha        | ISO Date String | La fecha está en formato ISO Date, por comodidad se usa con GMT-5: `2016-11-15T20:00:00-05:00` para poder poner la hora local, si queda menos de un día se pone `Dentro de Poco` |
 | preguntasUrl | String URL      | **OPCIONAL** Url al archivo con las preguntas y respuestas de la charla |
-| streamingUrl | String URL      | **OPCIONAL** URL del streaming, si hay URL de streaming y han pasado menos 3 horas desde la `fecha` en el sitio se pone `Transmisión en Vivo` |
 | videoId      | String URL      | **OPCIONAL** Id del video en Youtube para embeber y vincular, por ej: `xeos_GggoMk` |
 ### Charlante
 
@@ -97,15 +96,15 @@ Hay diferentes aspectos del servidor y del cliente a tener en cuenta:
 
 <img alt="antes" src="https://cldup.com/DMESEBJ0XT.png" width="540" />
 
-- Si queda menos de 24 horas para el evento y se pone un contador regresivo y si no hay `streamingUrl` dirá `Dentro de Poco`
+- Si queda menos de 24 horas para el evento y se pone un contador regresivo
 
 <img alt="preview" src="https://cldup.com/AeQRs_BYTt.png" width="200" />
 
-- Si han pasado menos de 3 horas desde el inicio del evento y hay `streamingUrl` dirá `Transmisión en Vivo`
+- Si han pasado menos de 3 horas desde el inicio del evento dirá `Transmisión en Vivo`
 
 <img alt="preview" src="https://cldup.com/YW3blg7nyz.png" width="200" />
 
-- Si aún no ha iniciado el evento pero faltan menos de 24 horas y hay `streamingUrl` dirá `Transmisión en Vivo` y pondrá el contador regresivo
+- Si aún no ha iniciado el evento pero faltan menos de 24 horas dirá `Transmisión en Vivo` y pondrá el contador regresivo
 
 <img alt="preview" src="https://cldup.com/yqLS_Ovq2o.png" width="200" />
 
