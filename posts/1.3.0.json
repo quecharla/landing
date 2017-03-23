@@ -1,5 +1,27 @@
 {
   "fecha"       : "2017-03-28T20:00:00-05:00",
+  "streamingUrl": "https://youtube.com/c/Charlando/live",
   "charlantes"  : [
+    {
+      "nombre"   : "Vera Mazhuga",
+      "twitter"  : "vero4ka_ru",
+      "titulo"   : "Cómo hacer un bot de SITP en Python",
+      "subtitulo": "",
+      "avatar"   : "http://res.cloudinary.com/charla/image/upload/v1490301940/vera_r0npvu.jpg"
+    },
+    {
+      "nombre"   : "Belén Curcio",
+      "twitter"  : "okbel",
+      "titulo"   : "TBD",
+      "subtitulo": "",
+      "avatar"   : "https://pbs.twimg.com/profile_images/755468382904934400/oRi27GT7.jpg"
+    },
+    {
+      "nombre"   : "Yuliana Jimenez",
+      "twitter"  : "tuxxy",
+      "titulo"   : "A-frame la realidad virtual en la web",
+      "subtitulo": "",
+      "avatar"   : "https://pbs.twimg.com/profile_images/818336038196277248/AzOd1V7h.jpg"
+    }
   ]
 }
