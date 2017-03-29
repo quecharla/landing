@@ -10,13 +10,6 @@
       "avatar"   : "http://res.cloudinary.com/charla/image/upload/v1490301940/vera_r0npvu.jpg"
     },
     {
-      "nombre"   : "Belén Curcio",
-      "twitter"  : "okbel",
-      "titulo"   : "Probablemente necesites GraphQL",
-      "subtitulo": "",
-      "avatar"   : "https://pbs.twimg.com/profile_images/755468382904934400/oRi27GT7.jpg"
-    },
-    {
       "nombre"   : "Yuliana Jimenez",
       "twitter"  : "tuxxy",
       "titulo"   : "A-frame la realidad virtual en la web",
