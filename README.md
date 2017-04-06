@@ -1,4 +1,5 @@
 <img alt="Char.la" src="public/images/favicon/android-chrome-192x192.png" width="80" />
+
 # Char.la
 
 Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.
