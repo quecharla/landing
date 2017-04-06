@@ -94,7 +94,7 @@ function renderCoC (req, res) {
  * @param  {Object} res response
  */
 function renderPropuesta (req, res) {
-  res.render('propuesta.njk')
+  res.redirect('https://github.com/quecharla/propuestas/issues/new')
 }
 
 // Force HTTPS

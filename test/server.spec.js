@@ -38,7 +38,7 @@ test('Propuesta', async t => {
     .get('/propuesta')
     .send()
 
-  t.is(res.status, 200)
+  t.is(res.status, 302)
 })
 
 test('Version válida', async t => {
