@@ -16,11 +16,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 DTSTAMP:20170406T005440Z
-UID:20170406T005440Z-1417984302@marudot.com
 DTSTART;TZID="America/Bogota":20170425T200000
 DTEND;TZID="America/Bogota":20170425T210000
 SUMMARY:Char.la - 1.4.0
-URL:https%3A%2F%2Fyoutube.com%2Fc%2FCharlando%2Flive
 DESCRIPTION:https://youtube.com/c/Charlando/live
 LOCATION:https://youtube.com/c/Charlando/live
 BEGIN:VALARM
