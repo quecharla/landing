@@ -5,6 +5,7 @@ const nunjucks = require('nunjucks')
 const semverSort = require('semver-sort')
 const utils = require('./lib/utils')
 const letsencrypt = require('./lib/letsencrypt')
+const ical = require('ical-generator')
 
 const POSTS_DIR = './posts'
 const PORT = process.env.PORT || 8080
@@ -25,10 +26,12 @@ const ediciones = semverSort.desc(versions)
         .map(version => {
           const edicion = require(`${POSTS_DIR}/${version}.json`)
           const fecha = new Date(edicion.fecha)
+          const fechaFin = new Date(+fecha + 60 * 60 * 1000)
           return Object.assign(
           {}, edicion, {
             fechaString: edicion.fecha,
             fecha: fecha,
+            fechaFin: fechaFin,
             fechaFormat: dateformat(fecha, 'yyyy/mm/dd'),
             hora: dateformat(fecha, 'h:MMTT'),
             yaPaso: fecha < Date.now() - duraciónTransmisión,
@@ -40,6 +43,27 @@ const ediciones = semverSort.desc(versions)
         })
 
 const nextEdition = ediciones[0]
+const cal = ical({
+  domain: 'char.la',
+  name: 'Char.la',
+  events: ediciones.map((edición) => ({
+    start: edición.fecha,
+    end: edición.fechaFin,
+    timestamp: new Date(),
+    summary: `Char.la - ${edición.version}`,
+    description: `Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.
+      Síguenos en: https://twitter.com/quecharla
+      Streaming en: https://youtube.com/c/Charlando/live`,
+    organizer: 'Char.la <hola@char.la>',
+    url: 'https://youtube.com/c/Charlando/live',
+    location: 'https://youtube.com/c/Charlando/live',
+    alarms: [{type: 'display', trigger: 900}, {type: 'display', trigger: 18000}]
+  }))
+})
+
+cal.timezone('America/Bogota')
+cal.url('https://char.la/calendar.ics')
+cal.ttl(60 * 60 * 24)
 
 nunjucks.configure('app/templates', {
   autoescape: true,
@@ -97,6 +121,15 @@ function renderPropuesta (req, res) {
   res.redirect('https://github.com/quecharla/propuestas/issues/new')
 }
 
+/**
+ * Renderiza el calendario con todos los eventos de charla.
+ * @param  {Object} req request
+ * @param  {Object} res response
+ */
+function renderICAL (req, res) {
+  cal.serve(res)
+}
+
 // Force HTTPS
 // http://stackoverflow.com/questions/7185074/heroku-nodejs-http-to-https-ssl-forced-redirect
 if (NODE_ENV !== 'development') {
@@ -130,6 +163,14 @@ app.get('/coc', renderCoC)
 app.get('/propuesta', renderPropuesta)
 app.get('/propuestas', renderPropuesta)
 app.get('/cfp', renderPropuesta)
+
+// Calendario iCal
+app.get('/calendar', renderICAL)
+app.get('/calendario', renderICAL)
+app.get('/eventos', renderICAL)
+app.get('/calendar.ical', renderICAL)
+app.get('/calendario.ical', renderICAL)
+app.get('/eventos.ical', renderICAL)
 
 // Let's encrypt challenge
 app.get('/.well-known/acme-challenge/:key', letsencrypt)
