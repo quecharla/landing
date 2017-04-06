@@ -2,6 +2,8 @@
 
 # Char.la
 
+[![CircleCI](https://circleci.com/gh/quecharla/landing/tree/master.svg?style=svg)](https://circleci.com/gh/quecharla/landing/tree/master)
+
 Char.la es un Meetup virtual de conocimiento técnico avanzado en español. Una vez al mes tendremos tres charlas técnicas sobre software en español.
 
 ## Env
