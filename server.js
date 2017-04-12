@@ -115,9 +115,17 @@ app.get('/', function (req, res) {
 })
 
 // Banners para el streaming
-app.get('/banners', function (req, res) {
+app.get('/banners(/:version)?', function (req, res) {
+  let edición = nextEdition
+  let version = req.params.version
+  if (version) {
+    edición = ediciones.find(edicion => edicion.version === version)
+  }
+  if (!edición) {
+    res.status(404).send('Aquí no hay naidens')
+  }
   res.render('video-assets.njk', {
-    proximaEdicion: nextEdition
+    proximaEdicion: edición
   })
 })
 

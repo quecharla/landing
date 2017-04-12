@@ -81,17 +81,23 @@ function crearTarjetaDelCharlante (charlante) {
 
 function renderCanvasPNG (canvas, width, height) {
   const image2x = new Image()
-  image2x.src = canvas.toDataURL('image/png')
 
   const hiddenCanvas = document.createElement('canvas')
   const ctxHiddenCanvas = hiddenCanvas.getContext('2d')
   hiddenCanvas.width = width
   hiddenCanvas.height = height
-  ctxHiddenCanvas.drawImage(image2x, 0, 0, width, height)
 
-  const resultImage = new Image()
-  resultImage.src = hiddenCanvas.toDataURL('image/png')
-  document.body.appendChild(resultImage)
+  image2x.onload = function () {
+    ctxHiddenCanvas.drawImage(image2x, 0, 0, width, height)
+
+    const resultImage = new Image()
+    resultImage.src = hiddenCanvas.toDataURL('image/png')
+    // si quieres renderizar el canvas:
+    // document.body.appendChild(image2x)
+    // document.body.appendChild(hiddenCanvas)
+    document.body.appendChild(resultImage)
+  }
+  image2x.src = canvas.toDataURL('image/png')
 }
 
 /**
