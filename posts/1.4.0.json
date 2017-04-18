@@ -2,5 +2,19 @@
   "fecha"       : "2017-04-25T20:00:00-05:00",
   "streamingUrl": "https://youtube.com/c/Charlando/live",
   "charlantes"  : [
+    {
+      "nombre"         : "Lourdes Montano",
+      "twitter"        : "louMontano",
+      "titulo"         : "CSS Naming Conventions",
+      "subtitulo"      : "",
+      "avatar"         : "https://pbs.twimg.com/profile_images/772842482371559425/PQwVnjl1.jpg"
+    },
+    {
+      "nombre"         : "Yuji Kiriki",
+      "twitter"        : "ykiriki",
+      "titulo"         : "FP en Scala",
+      "subtitulo"      : "",
+      "avatar"         : "https://pbs.twimg.com/profile_images/801584343999283200/uyn7UoJM.jpg"
+    }
   ]
 }
