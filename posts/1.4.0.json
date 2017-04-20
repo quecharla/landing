@@ -15,6 +15,13 @@
       "titulo"         : "FP en Scala",
       "subtitulo"      : "",
       "avatar"         : "https://pbs.twimg.com/profile_images/801584343999283200/uyn7UoJM.jpg"
+    },
+    {
+      "nombre"         : "Camilo Aguilar",
+      "twitter"        : "c4milo",
+      "titulo"         : "Algoritmo Rsync",
+      "subtitulo"      : "",
+      "avatar"         : "https://pbs.twimg.com/profile_images/605968391959126016/NXRZoBJu.jpg"
     }
   ]
 }
