@@ -1,20 +1,24 @@
 {
   "fecha"       : "2017-02-21T20:00:00-05:00",
   "streamingUrl": "https://youtube.com/c/Charlando/live",
+  "videoId"     : "TrK-CHqq9hA",
+  "preguntasUrl": "https://paper.dropbox.com/doc/Links-y-Preguntas-Char.la-v1.2.0-ojnPotplLaFMCxSbjOCSP",
   "charlantes"  : [
     {
       "nombre"         : "Cristian Gomez",
       "twitter"        : "iyubinest",
       "titulo"         : "Código limpio en la UI para Android, mejores prácticas",
       "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/608381669310144513/osagbaim.jpg"
+      "avatar"         : "https://pbs.twimg.com/profile_images/608381669310144513/osagbaim.jpg",
+      "slides"         : "https://speakerdeck.com/iyubinest/codigo-limpio-en-la-ui-para-android-mejores-practicas"
     },
     {
       "nombre"         : "Gabriel Chertok",
       "twitter"        : "iamcherta",
       "titulo"         : "Flow - Static type checking for JavaScript",
       "subtitulo"      : "Quisiera contar mi experiencia usando flow en apps javascript en general y React en particular.",
-      "avatar"         : "https://avatars1.githubusercontent.com/u/373454?v=3&s=400"
+      "avatar"         : "https://avatars1.githubusercontent.com/u/373454?v=3&s=400",
+      "slides"         : "https://docs.google.com/presentation/d/10Y99hd1QE0GOqy7hMMq74goxYTiDXazaCBEceyIik_M/edit?usp=sharing"
     },
     {
       "nombre"         : "Andrés Vargas",

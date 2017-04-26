@@ -1,20 +1,23 @@
 {
   "fecha"       : "2017-04-25T20:00:00-05:00",
   "streamingUrl": "https://youtube.com/c/Charlando/live",
+  "videoId"     : "jD9T7cem7I0",
   "charlantes"  : [
     {
       "nombre"         : "Lourdes Montano",
       "twitter"        : "louMontano",
       "titulo"         : "CSS Naming Conventions",
       "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/772842482371559425/PQwVnjl1.jpg"
+      "avatar"         : "https://pbs.twimg.com/profile_images/772842482371559425/PQwVnjl1.jpg",
+      "slides"         : "https://www.slideshare.net/loumontano/nomenclatura-en-css"
     },
     {
       "nombre"         : "Yuji Kiriki",
       "twitter"        : "ykiriki",
       "titulo"         : "FP en Scala",
       "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/801584343999283200/uyn7UoJM.jpg"
+      "avatar"         : "https://pbs.twimg.com/profile_images/801584343999283200/uyn7UoJM.jpg",
+      "slides"         : "https://speakerdeck.com/yujikiriki/scala-fp-at-s4n"
     },
     {
       "nombre"         : "Camilo Aguilar",

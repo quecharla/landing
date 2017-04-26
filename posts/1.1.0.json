@@ -1,13 +1,16 @@
 {
-  "fecha": "2017-01-10T20:00:00-05:00",
+  "fecha"       : "2017-01-10T20:00:00-05:00",
   "streamingUrl": "http://bit.ly/charla-v1",
-  "charlantes": [
+  "videoId"     : "Pa__T-yICYE",
+  "preguntasUrl": "https://paper.dropbox.com/doc/Links-y-Preguntas-Char.la-v1.1.0-h3w2RMRTxXpjPMZCx4Oso",
+  "charlantes"  : [
     {
       "nombre"   : "Adrián Catalán",
       "twitter"  : "ykro",
       "titulo"   : "Inyección de dependencias en Android",
       "subtitulo": "Exploraremos como se relaciona con el principio de inversión de dependencias y como se utiliza en Android.",
-      "avatar"   : "https://avatars3.githubusercontent.com/u/398169?v=3&s=460"
+      "avatar"   : "https://avatars3.githubusercontent.com/u/398169?v=3&s=460",
+      "slides"   : "https://goo.gl/xknA9N"
     },
     {
       "nombre"   : "David Calavera",
