@@ -1,26 +1,32 @@
 {
   "fecha"       : "2017-05-31T20:00:00-05:00",
+  "streamingUrl": "https://youtube.com/c/Charlando/live",
+  "preguntasUrl": "https://paper.dropbox.com/doc/Links-y-Preguntas-Char.la-v1.5.0-UVIwibWQkFlUIMSu7Kgi4",
+  "videoId"     : "D-04vg5hvEQ",
   "charlantes"  : [
     {
       "nombre"         : "Evangelina Ferreira",
       "twitter"        : "evaferreira92",
       "titulo"         : "Más allá de los keyframes",
       "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/540127281490845697/_2zxxUOt.jpeg"
+      "avatar"         : "https://pbs.twimg.com/profile_images/540127281490845697/_2zxxUOt.jpeg",
+      "slides"         : "https://github.com/evaferreira/mas-alla-de-keyframes"
     },
     {
       "nombre"         : "Diego Rodríguez Baquero",
       "twitter"        : "DiegoRBaquero",
       "titulo"         : "WebTorrent + Peerify",
       "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/805258396450586624/AOls9RqF.jpg"
+      "avatar"         : "https://pbs.twimg.com/profile_images/805258396450586624/AOls9RqF.jpg",
+      "slides"         : "https://docs.google.com/presentation/d/1s8Zg-pJIvdOccPtJfCQcKbbvqiQ4XlIApNyRFuYdqR8/edit?usp=sharing"
     },
     {
       "nombre"         : "Guido Marucci Blas",
       "twitter"        : "guidomb",
       "titulo"         : "Como aplicar la arquitectura propuesta por Elm en Swift",
       "subtitulo"      : "",
-      "avatar"         : "https://pbs.twimg.com/profile_images/805793188174819328/hhd1qxLO.jpg"
+      "avatar"         : "https://pbs.twimg.com/profile_images/805793188174819328/hhd1qxLO.jpg",
+      "slides"         : "https://speakerdeck.com/guidomb/como-aplicar-la-arquitectura-de-elm-en-swift"
     }
   ]
 }
