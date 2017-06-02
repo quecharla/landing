@@ -120,7 +120,6 @@ Existe la vista `/banners` que genera los banners para los videos con los speake
 ## TODO
 
 - [ ] Soportar `videoId` en el speaker
-- [ ] Generar el telón de la próxima edición
 
 
 ## Licencia
